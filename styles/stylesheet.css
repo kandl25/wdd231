@@ -1,119 +1,128 @@
-body {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-  }
+/****media view****/
+:root {
+  --background: #BFD7B5;
+  --text: #413C58;
+}
+/***** top of page *****/
 header {
-    border: 5px solid #BB8588;
-    border-radius: 5px;
-    display: block;
-    text-align: center;
-    padding: 10px;
-    grid-column: 1 / 4;
+  display: grid;
+  padding: 20px;
+  background-color: var(--background);
+  text-align: center;
+  color: #413C58;
+  text-decoration: underline double 2px #F2DDA4;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: large;
 }
-h1 {
-    font-family: "Shadows Into Light Two", cursive;
-    font-style: bold;
-    color: #A5C882;
-    text-align: center;
-    text-decoration: underline #C2B9C2;
+.dropbtn {
+  background-color: transparent;
+  color: var(--text);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: x-large;
+} 
+.dropdown {
+  display: block;
+  position: absolute;
 }
-.topnav {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    font-family: "Laila";
-    text-align: center;
-    padding: 1rem;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  z-index: 3;
+}  
+.dropdown-content a {
+  color: #413C58;
+  background-color: #A3C4BC;
+  border: #BFD7B5 groove 5px;
+  border-radius: 5px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}  
+.dropdown-content a:hover {background-color: #F2DDA4}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}  
+.dropdown:hover .dropbtn {
+  background-color: #F2DDA4;
 }
-.links {
-    /*display: flex;
-    flex-direction: row;*/
-    font-family: "Laila";
-    text-align: center;
-    justify-content: space-evenly;
-}
-nav a:hover {
-    color: #B39BC8;
-    border-style: double;
-}
+
+/******* Mid Page *******/
 main {
-   display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-   /* grid-row-gap: 5px;
-    grid-column-gap: 50px;*/
-    max-width: 2000px;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+  padding: 100px 5px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-color: #F2DDA4;
+  z-index: -1;
 }
-.mecard {
-    border: 5px solid #C2B9C2;
-    border-radius: 10px;
-    margin: 5px;
-    height: 800px;
-    padding: 10px;
-   /* display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto; */
+.card-center, .card-left, .card-right {
+  border: #BFD7B5 groove 5px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgb(163, 196, 188, 0.3);
+  color: #413C58;
 }
-.left {
-    text-align: right;
-    font-family: "Laila";
-    padding: 10px;
-   /* grid-row: 3 / span 3;
-    grid-column: 2 / span 3;*/
-} 
-.right {
-    text-align: left;
-    font-family: "Laila";
-    padding: 10px;
-   /* grid-row: 2 / span 3;
-    grid-column: 2 / span 3;*/
-} 
-.resourcecard {
-    border: 5px solid #C2B9C2;
-    border-radius: 10px;
-    text-align: center;
-    height: 800px;
-    margin: 5px;
-    padding: 10px;
-}
-footer {
-    background: #C2CAD0;
-    padding: 2rem;
-    text-align: center;
-    grid-column: 1 / 4;
-    color:#BB8588;
-  }
-img {
-    border-radius: 20px;
-}
-.couple {
-    height: 275px;
-    width: 390Px;
-    padding: 10px;
-    float: left;
-   /* grid-row: 1 / span 3;
-    grid-column: 2 / span 4; */
-}
-.knives {
-    height: 300px;
-    width: 200px;
-    padding: 10px;
-    float: right;
-    /* display: grid;
-    grid-row: 2 / span 4;
-    grid-column: 2 / span 4; */
+a:hover{
+  box-shadow:5px 5px 10px #F3A6CF;
+  background-color: #F2DDA4;
 }
 h2 {
-    font-family: "Shadows Into Light Two", cursive;
-    text-decoration: underline double #A5C882;
-    font-size: 2em;
-}
-.resources {
-    display: flex;
-    padding: 1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: normal;
 
+}
+h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ballet, .ballroom, .hiphop {
+  width: 180px;
+  height: auto;
+  margin: 10px;
+  display: flex;
+  float: left;
+}
+footer {
+  background-color: var(--background);
+  text-align: center;
+  padding: 20px;
+  color:#413C58;
+}
+
+/***** Large View ******/
+@media (min-width: 740px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    
+}
+.card-left {
+    text-align: left;
+}
+.card-center {
+    text-align: center;
+}
+.card-right {
+    text-align: right;
+}
+.ballet {
+    display: flex;
+    float: right;
+}
+.hiphop {
+    display: flex;
+    float: left;
+}
 }
