@@ -1,8 +1,15 @@
 const currentyear = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified")
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu');
 
 const today = new Date();
 const lastMod = document.lastModified;
 
 year.innerHTML = `${today.getFullYear()}`;
 lastmodified.innerHTML = `Last Modification: ${lastMod}`;
+
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});

@@ -10,7 +10,6 @@ header {
   background-color: var(--background);
   align-content: space-evenly;
   color: #413C58;
-  text-decoration: underline double 2px #F2DDA4;
   font-family: "Edu NSW ACT Foundation", cursive;
   font-size: large;
 }
@@ -19,64 +18,62 @@ header {
   height: 120px;
   padding: 20px;
 }
-.button {
-  background-color: transparent;
-  color: var(--text);
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: x-large;
-} 
-.topnav {
+#menu {
   display: block;
-  float: right;
-}
-.dropdown {
-  display: none;
-  float: right;
-  background-color: transparent;
-  min-width: 160px;
-  z-index: 3;
-}  
-.dropdown a {
-  color: #413C58;
-  background-color: #A3C4BC;
-  border: #BFD7B5 groove 5px;
-  border-radius: 5px;
-  padding: 12px 16px;
   text-decoration: none;
-  display: block;
-}  
-.dropdown a:hover {background-color: #F2DDA4}
-
-.topnav:hover .dropdown {
-  display: block;
-}  
-.topnav:hover .button {
-  background-color: #F2DDA4;
+  padding: 5px;
 }
-
-☰
+#menu::before {
+  content: "☰";
+  font-size: x-large;
+}
+/*nav {
+  background-color: #BB8588;
+}*/
+.navigation {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 760px;
+}
+.navigation li {
+  display: none;
+}
+.navigation a {
+  display: block;
+  text-align: right;
+  color: var(--text);
+}
+.navigation a:hover, navigation a:active {
+  color:#BFD7B5;
+  background-color: black;
+}
+.show li {
+  display: block;
+}
+#menu.show::before {
+  content: "X";
+  font-size: x-large;
+}
 
 /******* Mid Page *******/
 main {
-  padding: 100px 5px;
+  padding: 20px 5px;
   display: flex;
   flex-direction: column;
 }
 .course, .location, .bottom {
-  border: #BFD7B5 groove 5px;
-  border-radius: 5px;
-  margin: 10px;
+  /*border: #BFD7B5 groove 5px;
+  border-radius: 5px;*/
+  margin: 5px;
   padding: 10px;
   text-decoration: none;
   background-color: rgb(163, 196, 188, 0.3);
   color: #413C58;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h1 {
   background-color: var(--background);
+  padding: 20px;
 }
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -93,13 +90,28 @@ footer {
 }
 
 /***** Large View ******/
-@media (min-width: 746px) {
+@media (min-width: 760px) {
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-content: space-around;
     
-}
-  
+  }
+  .navigation {
+    display: flex;
+  }
+  .navigation li {
+    display: block;
+    flex: 1 1 100%;
+  }
+  .navigation a {
+    text-align: center;
+  }
+  #menu {
+    display: none;
+  }
+  .course .location .bottom {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
