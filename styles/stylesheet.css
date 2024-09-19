@@ -1,20 +1,25 @@
 /****media view****/
 :root {
-  --background: #BFD7B5;
+  --background: #C2B9C2;
   --text: #413C58;
 }
 /***** top of page *****/
 header {
-  display: grid;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
   background-color: var(--background);
-  text-align: center;
+  align-content: space-evenly;
   color: #413C58;
   text-decoration: underline double 2px #F2DDA4;
   font-family: "Edu NSW ACT Foundation", cursive;
   font-size: large;
 }
-.dropbtn {
+.self {
+  width: auto;
+  height: 120px;
+  padding: 20px;
+}
+.button {
   background-color: transparent;
   color: var(--text);
   padding: 10px;
@@ -22,18 +27,18 @@ header {
   cursor: pointer;
   font-size: x-large;
 } 
-.dropdown {
+.topnav {
   display: block;
-  position: absolute;
+  float: right;
 }
-.dropdown-content {
+.dropdown {
   display: none;
-  position: absolute;
+  float: right;
   background-color: transparent;
   min-width: 160px;
   z-index: 3;
 }  
-.dropdown-content a {
+.dropdown a {
   color: #413C58;
   background-color: #A3C4BC;
   border: #BFD7B5 groove 5px;
@@ -42,27 +47,24 @@ header {
   text-decoration: none;
   display: block;
 }  
-.dropdown-content a:hover {background-color: #F2DDA4}
+.dropdown a:hover {background-color: #F2DDA4}
 
-.dropdown:hover .dropdown-content {
+.topnav:hover .dropdown {
   display: block;
 }  
-.dropdown:hover .dropbtn {
+.topnav:hover .button {
   background-color: #F2DDA4;
 }
+
+☰
 
 /******* Mid Page *******/
 main {
   padding: 100px 5px;
   display: flex;
   flex-direction: column;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
-  background-color: #F2DDA4;
-  z-index: -1;
 }
-.card-center, .card-left, .card-right {
+.course, .location, .bottom {
   border: #BFD7B5 groove 5px;
   border-radius: 5px;
   margin: 10px;
@@ -70,28 +72,18 @@ main {
   text-decoration: none;
   background-color: rgb(163, 196, 188, 0.3);
   color: #413C58;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-a:hover{
-  box-shadow:5px 5px 10px #F3A6CF;
-  background-color: #F2DDA4;
-}
-h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: normal;
-
-}
-h3 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+h1 {
+  background-color: var(--background);
 }
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.ballet, .ballroom, .hiphop {
-  width: 180px;
-  height: auto;
-  margin: 10px;
-  display: flex;
-  float: left;
+.temple {
+  width: 220px;
+  height: 150px;
 }
 footer {
   background-color: var(--background);
@@ -101,28 +93,13 @@ footer {
 }
 
 /***** Large View ******/
-@media (min-width: 740px) {
+@media (min-width: 746px) {
   main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-content: space-around;
     
 }
-.card-left {
-    text-align: left;
-}
-.card-center {
-    text-align: center;
-}
-.card-right {
-    text-align: right;
-}
-.ballet {
-    display: flex;
-    float: right;
-}
-.hiphop {
-    display: flex;
-    float: left;
-}
+  
 }
