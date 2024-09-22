@@ -113,7 +113,10 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-content: space-around;
-    
+  }
+  .bottom {
+    grid-column: 1 / span 3;
+    grid-row: 2;
   }
   .navigation {
     display: flex;
