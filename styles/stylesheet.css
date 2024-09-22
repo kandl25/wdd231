@@ -41,7 +41,6 @@ header {
   color: var(--text);
 }
 .navigation a:hover, navigation a:active {
-  color:#BFD7B5;
   background-color:bisque;
 }
 .show li {
@@ -50,6 +49,27 @@ header {
 #menu.show::before {
   content: "X";
   font-size: x-large;
+}
+
+/***** bottom nav ******/
+.course {
+  display: flex;
+}
+.course li {
+  display: block;
+  flex: 1 1 100%;
+}
+#all-courses:hover, #all-courses:active {
+  background-color: bisque;
+  cursor: pointer;
+}
+#cse-courses:hover, #cse-courses:active {
+  background-color: bisque;
+  cursor: pointer;
+}
+#wdd-courses:hover, #wdd-courses:active {
+  background-color: bisque;
+  cursor: pointer;
 }
 
 /******* Mid Page *******/
@@ -69,6 +89,10 @@ main {
 h1 {
   background-color: var(--background);
   padding: 20px;
+}
+p {
+  font-size: large;
+  padding: 10px;
 }
 .temple {
   width: 220px;

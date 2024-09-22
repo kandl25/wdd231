@@ -94,3 +94,36 @@ const courses = [
         completed: false
     }
 ]
+
+const courseContainer = document.getElementById("course");
+const allCoursesBtn = document.getElementById("all-courses");
+const cseCoursesBtn = document.getElementById("cse-courses");
+const wddCoursesBtn = document.getElementById("wdd-courses");
+  
+function createCourseCard(course) {
+    const card = document.createElement("div");
+    card.classList.add("course-card");
+  
+    if (course.completed) {
+        card.classList.add("completed");
+    }
+  
+    card.innerHTML = `
+      <h3>${course.title}</h3>
+      <p>Category: ${course.category}</p>
+      <p>Credits: ${course.credits}</p>
+    `;
+  
+    courseContainer.appendChild(card);
+}
+function displayCourses(filteredCourses) {
+    courseContainer.innerHTML = "";
+    filteredCourses.forEach(createCourseCard);
+    const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
+    console.log("Total Credits:", totalCredits);
+}
+  
+displayCourses(coursesData);
+allCoursesBtn.addEventListener("click", () => displayCourses(coursesData));
+cseCoursesBtn.addEventListener("click", () => displayCourses(coursesData.filter(course => course.category === "CSE")));
+wddCoursesBtn.addEventListener("click", () => displayCourses(coursesData.filter(course => course.category === "WDD")));
