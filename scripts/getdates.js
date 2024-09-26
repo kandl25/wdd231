@@ -95,35 +95,50 @@ const courses = [
     }
 ]
 
-const courseContainer = document.getElementById("course");
-const allCoursesBtn = document.getElementById("all-courses");
-const cseCoursesBtn = document.getElementById("cse-courses");
-const wddCoursesBtn = document.getElementById("wdd-courses");
-  
-function createCourseCard(course) {
-    const card = document.createElement("div");
-    card.classList.add("course-card");
-  
-    if (course.completed) {
-        card.classList.add("completed");
-    }
-  
-    card.innerHTML = `
-      <h3>${course.title}</h3>
-      <p>Category: ${course.category}</p>
-      <p>Credits: ${course.credits}</p>
-    `;
-  
-    courseContainer.appendChild(card);
+const baseClass = "courseCard";
+const takenClass = "taken";
+
+// DOM elements
+const coursesContainer = document.querySelector("#courseCards");
+const allButton = document.querySelector("#showAll");
+const cseButton = document.querySelector("#showCse");
+const wddButton = document.querySelector("#showWdd");
+const pendingCredits = document.querySelector('#creditsRequired');
+
+// fill in the required credits
+let totalCredits = courses.reduce((total, course) => total + course.credits, 0);
+pendingCredits.innerText = totalCredits;
+
+const courseCard = (subject, number) =>
+// template function to create 1 course card
+`<div class="${baseClass}">${subject} ${number}</div>`
+
+// fills courses container
+const fillCourses = (courseList) => {
+    coursesContainer.innerHTML = ""; // clears container to start populating
+    courseList.forEach(course => {
+        let newCourse = document.createElement("div");
+        newCourse.setAttribute("class", baseClass);
+        if (course.completed) {
+            newCourse.classList.add(takenClass);
+        }
+        newCourse.innerText = `${course.subject} ${course.number}`;
+        coursesContainer.appendChild(newCourse);
+    });    
 }
-function displayCourses(filteredCourses) {
-    courseContainer.innerHTML = "";
-    filteredCourses.forEach(createCourseCard);
-    const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
-    console.log("Total Credits:", totalCredits);
-}
-  
-displayCourses(coursesData);
-allCoursesBtn.addEventListener("click", () => displayCourses(coursesData));
-cseCoursesBtn.addEventListener("click", () => displayCourses(coursesData.filter(course => course.category === "CSE")));
-wddCoursesBtn.addEventListener("click", () => displayCourses(coursesData.filter(course => course.category === "WDD")));
+
+// filter event listeners
+allButton.addEventListener('click', () => {
+    fillCourses(courses);
+})
+
+cseButton.addEventListener('click', () => {
+    fillCourses(courses.filter(course => course.subject == "CSE"));
+})
+
+wddButton.addEventListener('click', () => {
+    fillCourses(courses.filter(course => course.subject == "WDD"));
+})
+
+// initial load of all courses
+fillCourses(courses);
