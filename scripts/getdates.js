@@ -98,24 +98,20 @@ const courses = [
 const baseClass = "courseCard";
 const takenClass = "taken";
 
-// DOM elements
-const coursesContainer = document.querySelector("#courseCards");
-const allButton = document.querySelector("#showAll");
-const cseButton = document.querySelector("#showCse");
-const wddButton = document.querySelector("#showWdd");
-const pendingCredits = document.querySelector('#creditsRequired');
+const coursesContainer = document.querySelector("#course-display");
+const allButton = document.querySelector("#all-courses");
+const cseButton = document.querySelector("#cse-courses");
+const wddButton = document.querySelector("#wdd-courses");
+const pendingCredits = document.querySelector('#required');
 
-// fill in the required credits
 let totalCredits = courses.reduce((total, course) => total + course.credits, 0);
 pendingCredits.innerText = totalCredits;
 
 const courseCard = (subject, number) =>
-// template function to create 1 course card
 `<div class="${baseClass}">${subject} ${number}</div>`
 
-// fills courses container
 const fillCourses = (courseList) => {
-    coursesContainer.innerHTML = ""; // clears container to start populating
+    coursesContainer.innerHTML = "";
     courseList.forEach(course => {
         let newCourse = document.createElement("div");
         newCourse.setAttribute("class", baseClass);
@@ -127,7 +123,6 @@ const fillCourses = (courseList) => {
     });    
 }
 
-// filter event listeners
 allButton.addEventListener('click', () => {
     fillCourses(courses);
 })
@@ -140,5 +135,4 @@ wddButton.addEventListener('click', () => {
     fillCourses(courses.filter(course => course.subject == "WDD"));
 })
 
-// initial load of all courses
 fillCourses(courses);
