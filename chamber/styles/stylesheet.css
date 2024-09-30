@@ -1,0 +1,105 @@
+/****media view****/
+:root {
+  --background: #bf0603;
+  --border: 3px solid #bf0603;
+  --text-align: center;
+  --padding: 5px;
+}
+/* colors: red bf0603, yellow f4d58d, black and white for text */
+
+/***** top of page *****/
+header {
+  display: flex;
+  justify-content: center;
+  border: var(--border);
+  align-content: space-evenly;
+  color: #bf0603;
+}
+.logo {
+  width: 120px;
+  height: 120px;
+}
+.menu {
+  display: block;
+  text-decoration: none;
+  padding: var(--padding);
+}
+.menu::before {
+  content: "☰";
+  font-size: x-large;
+}
+.navigation {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 760px;
+}
+.navigation li {
+  display: none;
+}
+.navigation a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+}
+.navigation a:hover, navigation a:active {
+  background-color: #f4d58d;
+}
+.show li {
+  display: block;
+}
+.menu.show::before {
+  content: "X";
+  font-size: x-large;
+}
+
+/******* Mid Page *******/
+main {
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: large;
+}
+
+footer {
+  background-color: var(--background);
+  text-align: center;
+  padding: 20px;
+  color:#413C58;
+}
+
+/***** Large View ******/
+@media (min-width: 760px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+  }
+  .bottom {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+  .navigation {
+    flex-direction: row;
+  }
+  .navigation li {
+    display: block;
+    flex: 1 1 100%;
+  }
+  .navigation a {
+    text-align: center;
+  }
+  #menu {
+    display: none;
+  }
+  #course-display {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350fr));
+  }
+  .course .location .bottom {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
