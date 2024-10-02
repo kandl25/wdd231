@@ -1,14 +1,65 @@
 [
     {
-        "name": "",
-        "address":"",
-        "phone": "",
-        "url": "",
-        "email": "",
-        "file_name": "",
-        "membership": "",
-        "tags": [""],
-        "fund_year": "",
-        "iso_certify": false
-    }
-]
+      "name": "Company 1",
+      "address": "123 Main St, Anytown, USA",
+      "phone": "555-555-5555",
+      "website": "https://www.company1.com",
+      "image": "company1.jpg",
+      "membershipLevel": 1,
+      "otherInfo": "This is some additional information about Company 1."
+    },
+    {
+        "name": "Company 1",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-555-5555",
+        "website": "https://www.company1.com",
+        "image": "company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "This is some additional information about Company 1."
+      },
+      {
+        "name": "Company 1",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-555-5555",
+        "website": "https://www.company1.com",
+        "image": "company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "This is some additional information about Company 1."
+      },
+      {
+        "name": "Company 1",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-555-5555",
+        "website": "https://www.company1.com",
+        "image": "company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "This is some additional information about Company 1."
+      },
+      {
+        "name": "Company 1",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-555-5555",
+        "website": "https://www.company1.com",
+        "image": "company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "This is some additional information about Company 1."
+      },
+      {
+        "name": "Company 1",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-555-5555",
+        "website": "https://www.company1.com",
+        "image": "company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "This is some additional information about Company 1."
+      },
+      {
+        "name": "Company 1",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-555-5555",
+        "website": "https://www.company1.com",
+        "image": "company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "This is some additional information about Company 1."
+      }
+  ]
