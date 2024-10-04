@@ -8,12 +8,22 @@
 }
 /* colors: red bf0603, yellow ffcf67, black and white for text */
 
+body {
+  
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #111; 
+  text-align: center; 
+  justify-content: center;
+}
+
 /***** top of page *****/
 header {
   display: flex;
   border: var(--border);
-  align-content: space-evenly;
+  align-content: space-around;
   color: #bf0603;
+  animation: gradientShift 15s infinite;
 }
 .head {
   display: flex;

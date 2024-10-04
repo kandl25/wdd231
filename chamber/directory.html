@@ -11,7 +11,6 @@
         <meta property="og:image" content="https://www.boisestate.edu/varsityb/see-blue/">
         <meta property="og:url" content="https://kandl25.github.io/wdd231/">
     
-        <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/stylesheet.css">
         <link rel="favicon" href="chamber/favicon.ico">
 
@@ -23,7 +22,7 @@
                 <img class="logo" src="images/commercelogo.webp" alt="Narnia Commerce" width="120" height="120">
                 <h1>Narnia<br>Chamber of Commerce</h1>
             </a>
-            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+            <!--<button id="dark-mode-toggle">Toggle Dark Mode</button>-->
             <nav class="menu">
                 <ul class="navigation">
                     <li><a href="https://kandl25.github.io/wdd231/chamber/home.html">Home</a></li>
@@ -33,32 +32,37 @@
                     <li class="nav-item"><a href="#" id="themetoggle-desk" aria-label="Dark theme toggle"><span class="material-symbols-outlined">contrast</span></a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="close" id="close">&times;</div>
         </header>
         <main>
             <h2>Member directory</h2>
-            <div id="member-container"></div>
-            <button id="toggle-view">Toggle View</button>
-            <!--<script src="script.js"></script>-->
+            <div id="members-container"></div>
+            
         </main>
         <footer>
-            <p>Chamber of Commerce<br>
-                777 Magic Ln<br>
-                Narnia<br>
-                info@narniacommerce.com<br>
-                777-555-7755
-            </p>
-            <div class="icons">
-                <a href="" aria-label="YouTube"></a>
-                <a href="" aria-label="Twitter"></a>
-                <a href="" aria-label="Linked In"></a>
+            <div class="left">
+                <p>Chamber of Commerce<br>
+                    777 Magic Ln<br>
+                    Narnia<br>
+                    info@narniacommerce.com<br>
+                    777-555-7755
+                </p>
             </div>
-            <p class="copywright"> &copy; 
-                <span id="year"></span>
-                Kaylee DeCamps | Idaho USA
-              </p>
-              <p class="modified">
-                <span id="lastmodified"></span>
-              </p>
+            <div class="icons">
+                <a href="#"><img src="./images/face-icon.webp" alt="Facebook Icon"></a>
+                <a href="#"><img src="./images/twitter-icon.webp" alt="Twitter Icon"></a>
+                <a href="#"><img src="./images/insta-icon.webp" alt="Instagram Icon"></a>
+            </div>
+            <div class="right">
+                <p class="copywright"> &copy; 
+                    <span id="year"></span>
+                    Kaylee DeCamps | Idaho USA
+                </p>
+                <p class="modified">
+                    <span id="lastmodified"></span>
+                </p>
+            </div>  
         </footer>
     </body>
 </html>

@@ -1,0 +1,68 @@
+{
+  "members": [
+    {
+      "name": "Riman Korean Beauty",
+      "address": "10809 N 5800 W",
+      "city": "American Fork, UT 84003",
+      "phone_number": "801-888-4502",
+      "website_url": "http://riman.com/",
+      "image": "https://docuteam.b-cdn.net/img.php?store=141056&type=logo",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Cascade Collision",
+      "address": "175 N 1200 E",
+      "city": "Lehi, UT 84043",
+      "phone_number": "801-919-8852",
+      "website_url": "http://cascadecollision.com/",
+      "image": "https://docuteam.b-cdn.net/img.php?store=36965&type=logo",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Mi Ranchito",
+      "address": "396 E State St",
+      "city": "American Fork, UT 84003",
+      "phone_number": "801-756-6138",
+      "website_url": "http://miranchitoamericanfork.com/",
+      "image": "https://docuteam.b-cdn.net/img.php?store=17496&type=logo",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Sherwin-Williams",
+      "address": "176 NW State St",
+      "city": "American Fork, UT 84003",
+      "phone_number": "801-756-1910",
+      "website_url": "http://sherwin-williams.com/",
+      "image": "https://docuteam.b-cdn.net/img.php?store=102254&type=logo",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Costa Vida",
+      "address": "643 W Pacific Dr",
+      "city": "American Fork, UT 84003",
+      "phone_number": "925-580-1893",
+      "website_url": "http://costavida.com/",
+      "image": "https://docuteam.b-cdn.net/img.php?store=13766&type=logo",
+      "membership_level": "Silver"
+    },
+    {
+      "name": "Kids Dental Home",
+      "address": "332s 500e",
+      "city": "American Fork, UT 84003",
+      "phone_number": "385-644-5437",
+      "website_url": "http://kidsdentalhomeutah.com",
+      "image": "https://docuteam.b-cdn.net/img.php?store=116905&type=logo",
+      "membership_level": "Silver"
+    },
+    {
+      "name": "Odyssey Charter School",
+      "address": "738 East Quality Drive",
+      "city": "American Fork, UT 84003",
+      "phone_number": "801-492-8105",
+      "website_url": "http://www.odysseycharter.net/",
+      "image": "https://docuteam.b-cdn.net/img.php?store=116971&type=logo",
+      "membership_level": "Silver"
+    }
+  
+  ]
+}
