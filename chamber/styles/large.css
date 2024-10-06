@@ -3,37 +3,31 @@
         display: flex;
         align-items:end;
     }
-    #menu, #themetoggle-mobile {
+    #theme, #themetoggle-mobile {
         display: none;
     }
     #themetoggle-desk {
         display: block;
     }
-    nav {
+    .navigation {
         grid-template-rows: 1fr;
         flex: 1 1 100%;
         transition: none;
     }
-    nav ul, nav ul.show {
+    .navigation ul.show {
         display: flex;
         justify-content: flex-end;
     }
-    nav a.active {
+    .navigation a.active {
         border-right: none;
         border-bottom: 7px solid var(--secondary-color);
     }   
-    .title-block {
-        min-width: 200px;
-    }
-    .footer-items {
+    footer {
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
     }
-    .footer-credits {
+    footer {
         margin: 0 0 0 auto
-    }
-    main h1 {
-        text-align: center;
     }
     .course .location .bottom {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
