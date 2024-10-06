@@ -12,6 +12,7 @@
         <meta property="og:url" content="https://kandl25.github.io/wdd231/">
     
         <link rel="stylesheet" href="styles/stylesheet.css">
+        <link rel="styleshee" href="styles/large.css">
         <link rel="favicon" href="chamber/favicon.ico">
 
         <script src="scripts/main.js"></script>
@@ -22,8 +23,12 @@
                 <img class="logo" src="images/commercelogo.webp" alt="Narnia Commerce" width="120" height="120">
                 <h1>Narnia<br>Chamber of Commerce</h1>
             </a>
-            <!--<button id="dark-mode-toggle">Toggle Dark Mode</button>-->
-            <nav class="menu">
+            <a href="#" id="themetoggle-mobile" aria-label="Dark theme toggle"><i class="demo-icon icon-adjust-1"></i> </a>
+                <a href="#" id="menu" aria-label="Menu icon">
+                <span class="demo-icon icon-menu" id="openmenuicon"></span>
+                <span class="demo-icon icon-cancel" id="closemenuicon"></span>
+            </a>
+            <nav id="menu">
                 <ul class="navigation">
                     <li><a href="https://kandl25.github.io/wdd231/chamber/home.html">Home</a></li>
                     <li><a href="https://kandl25.github.io/wdd231/chamber/directory.html">Directory</a></li>
@@ -37,9 +42,19 @@
         </header>
         <main>
             <h2>Member directory</h2>
-            <div id="members-container"></div>
-            
+            <div class="directory-controls">
+                <p>Toggle display: <button id="list-toggle">Grid/List</button></p>
+            </div>
+            <div class="directory-cards" id="cards-container">
+                <div class="company-card"><p class="name">Placeholder</p><img src="images/150x150.webp" alt="Placeholder image" width="100" height="100"><p class="address">Placeholder text</p><p class="phone">Phone: +838-123-123-1234</p><p class="whatsapp"><p class="url">www.placeholder.com</p><p class="membership">Member</p></div>
+                <div class="company-card"><p class="name">Placeholder</p><img src="images/150x150.webp" alt="Placeholder image" width="100" height="100"><p class="address">Placeholder text</p><p class="phone">Phone: +838-123-123-1234</p><p class="whatsapp"><p class="url">www.placeholder.com</p><p class="membership">Member</p></div>
+                <div class="company-card"><p class="name">Placeholder</p><img src="images/150x150.webp" alt="Placeholder image" width="100" height="100"><p class="address">Placeholder text</p><p class="phone">Phone: +838-123-123-1234</p><p class="whatsapp"><p class="url">www.placeholder.com</p><p class="membership">Member</p></div>
+                <div class="company-card"><p class="name">Placeholder</p><img src="images/150x150.webp" alt="Placeholder image" width="100" height="100"><p class="address">Placeholder text</p><p class="phone">Phone: +838-123-123-1234</p><p class="whatsapp"><p class="url">www.placeholder.com</p><p class="membership">Member</p></div>
+                <div class="company-card"><p class="name">Placeholder</p><img src="images/150x150.webp" alt="Placeholder image" width="100" height="100"><p class="address">Placeholder text</p><p class="phone">Phone: +838-123-123-1234</p><p class="whatsapp"><p class="url">www.placeholder.com</p><p class="membership">Member</p></div>
+                <div class="company-card"><p class="name">Placeholder</p><img src="images/150x150.webp" alt="Placeholder image" width="100" height="100"><p class="address">Placeholder text</p><p class="phone">Phone: +838-123-123-1234</p><p class="whatsapp"><p class="url">www.placeholder.com</p><p class="membership">Member</p></div>
+            </div>
         </main>
+        <script src="scripts/data.js"></script>
         <footer>
             <div class="left">
                 <p>Chamber of Commerce<br>
