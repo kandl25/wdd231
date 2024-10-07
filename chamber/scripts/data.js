@@ -1,15 +1,15 @@
 // DOM objects to use
-const listToggle = document.querySelector("#list-toggle");
-const cardsContainer = document.querySelector("#cards-container");
+/*const listToggle = document.querySelector("#list-toggle");
 
 listToggle.addEventListener('click', () => {
   cardsContainer.classList.toggle('list');
-});
+});*/
 
-const directoryJSON = 'data/members.json';
+const cardsContainer = document.querySelector("#cards");
+const url = "https://kandl25.github.io/wdd231/chamber/data/members.json";
 
 async function getMembers() {
-  const response = await fetch(directoryJSON);
+  const response = await fetch(url);
   const data = await response.json();
   displayMembers(data.members);
 }

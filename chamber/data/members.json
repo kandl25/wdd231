@@ -2,66 +2,59 @@
   "members": [
     {
       "name": "Pevensie Tea Room",
-      "address": "#",
-      "city": "Pevensie, RM 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://pevtea.fake/",
+      "address": "873 Overlook View, Pevensie, RM 98765",
+      "phone": "777-555-5555",
+      "url": "http://pevtea.fake/",
       "image": "images/tea.webp",
-      "membership_level": "Gold"
+      "membership": "Gold"
     },
     {
       "name": "Aslan's Enchanted Apothecary",
-      "address": "12 Enchanted Dr",
-      "city": "Stone Table, MG 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://enchantedapothecary.fake/",
+      "address": "12 Enchanted Dr, Stone Table, MG 98765",
+      "phone": "777-555-5555",
+      "url": "http://enchantedapothecary.fake/",
       "image": "images/apothecary.webp",
-      "membership_level": "Gold"
+      "membership": "Gold"
     },
     {
       "name": "Narnian Adventure Tours",
-      "address": "753 Middle of Nowhere Rd",
-      "city": "Scottland Cliffs, SL 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://narniatours.fake/",
+      "address": "753 Middle of Nowhere Rd, Scottland Cliffs, SL 98765",
+      "phone": "777-555-5555",
+      "url": "http://narniatours.fake/",
       "image": "images/narnian.webp",
-      "membership_level": "Silver"
+      "membership": "Silver"
     },
     {
       "name": "The Wardrobe Boutique",
-      "address": "77 Warbdrobe Way",
-      "city": "Wardrobe, Eng 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://hiddenboutique.fake/",
+      "address": "77 Warbdrobe Way, Wardrobe, Eng 98765",
+      "phone": "777-555-5555",
+      "url": "http://hiddenboutique.fake/",
       "image": "images/wardrobe.webp",
-      "membership_level": "Platinum"
+      "membership": "Platinum"
     },
     {
       "name": "White Witch Frozen Treats",
-      "address": "66 Stonehedge Way",
-      "city": "Antartica, GLB 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://witchyfrozentreats.fake/",
+      "address": "66 Stonehedge Way, Antartica, GLB 98765",
+      "phone": "777-555-5555",
+      "url": "http://witchyfrozentreats.fake/",
       "image": "images/witch.webp",
-      "membership_level": "Silver"
+      "membership": "Silver"
     },
     {
       "name": "Mr. Thomnas Stories",
-      "address": "123 Lamppost Dr",
-      "city": "Hidden Cavern, SL 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://thomnasbooks.fake",
+      "address": "123 Lamppost Dr, Hidden Cavern, SL 98765",
+      "phone": "777-555-5555",
+      "url": "http://thomnasbooks.fake",
       "image": "images/stories.webp",
-      "membership_level": "Platinum"
+      "membership": "Platinum"
     },
     {
       "name": "Caspian's Roayl Furniture",
-      "address": "738 Kingdom Dr",
-      "city": "Narnia, GLB 98765",
-      "phone_number": "777-555-5555",
-      "website_url": "http://caspianfurniture.fake/",
+      "address": "738 Kingdom Dr, Narnia, GLB 98765",
+      "phone": "777-555-5555",
+      "url": "http://caspianfurniture.fake/",
       "image": "images/caspian.webp",
-      "membership_level": "Silver"
+      "membership": "Silver"
     }
   
   ]
