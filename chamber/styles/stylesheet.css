@@ -8,19 +8,11 @@
 }
 /* colors: red bf0603, yellow ffcf67, black and white for text */
 
-body {
-  
-  font-family: 'Poppins', sans-serif;
-  color: black; 
-  text-align: center; 
-  justify-content: center;
-}
-
 /***** top of page *****/
 header {
   display: flex;
   border: var(--border);
-  align-content: space-around;
+  align-content: space-evenly;
   color: #bf0603;
   animation: gradientShift 15s infinite;
 }
@@ -29,74 +21,42 @@ header {
   align-items: flex-start;
   text-align: center;
 }
-
-.header-blocks {
+/******* Hamburger Nav *******/
+#menu {
+  display: block;
+  text-decoration: none;
   padding: 5px;
+}
+#menu::before{
+  content: "☰";
+  font-size: x-large;
+}
+.navigation {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 760px;
+}
+.navigation li {
+  display: none;
+}
+.navigation a {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--background);
+  transition: 5s;
 }
-
-#theme, #themetoggle-mobile, #themetoggle-desk {
-  color: black;
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
+.navigation a:hover, .navigation a:active{
+  background-color: #bf0603;
+  color: white;
+  cursor: pointer;
 }
-#themetoggle-desk {
-  display: none;
-}
-#themetoggle-desk:hover {
-  background-color: var(--primary-color);
-  color: var(--accent1-color);
-}
-.title-block {
-  flex: 1 1 100%;
-}
-#menu > #closemenuicon {
-  display: none;
-}
-#menu.show > #closemenuicon {
+.show li {
   display: block;
 }
-#menu > #openmenuicon {
-  display: block;
-}
-#menu.show > #openmenuicon {
-  display: none;
-}
-nav {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease-out;
-}
-nav.show {
-  grid-template-rows: 1fr;
-}
-nav ul {
-  background-color: var(--nav-background-color);
-  color: var(--nav-link-color);
-  overflow: hidden;
-}
-nav li {
-  text-align: right;
-  display: block;
-  display: flex;
-}
-nav a {
-  color: var(--nav-link-color);
-  display: block;
-  text-decoration: none;
-  padding: 0.8rem;
-  flex: 1;
-}
-nav a:hover {
-  background-color: var(--accent1-color);
-  color: var(--accent1-color-text);
-}
-nav a.active {
-  border-bottom: 7px solid var(--secondary-color);
+#menu.show::before {
+  content: "X";
+  font-size: x-large;
 }
 
 /* Dark mode styles */

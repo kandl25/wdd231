@@ -3,9 +3,9 @@ const lastModified = document.querySelector("#lastModified")
 const darkmode1 = document.querySelector("#themetoggle-desk");
 const darkmode2 = document.querySelector("#themetoggle-mobile");
 const bodyTag = document.querySelector("body");
-/* hamburger menu */
 const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu');
+
 hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');

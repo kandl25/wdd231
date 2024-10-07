@@ -10,7 +10,8 @@
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://www.boisestate.edu/varsityb/see-blue/">
         <meta property="og:url" content="https://kandl25.github.io/wdd231/">
-    
+        
+       <!-- <link rel="stylesheet" href="styles/normalize.css">-->
         <link rel="stylesheet" href="styles/stylesheet.css">
         <link rel="stylesheet" href="styles/large.css">
         <link rel="favicon" href="chamber/favicon.ico">
@@ -28,20 +29,20 @@
                 <span class="demo-icon icon-menu" id="openmenuicon"></span>
                 <span class="demo-icon icon-cancel" id="closemenuicon"></span>
             </a>
-            <nav id="menu">
+            <a id="menu"></a>
+            <nav>
                 <ul class="navigation">
-                    <li><a href="https://kandl25.github.io/wdd231/chamber/home.html">Home</a></li>
-                    <li><a href="https://kandl25.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="#">Join</a></li>
                     <li><a href="#">Discover</a></li>
-                    <li class="nav-item"><a href="#" id="themetoggle-desk" aria-label="Dark theme toggle"><span class="material-symbols-outlined">contrast</span></a></li>
                 </ul>
             </nav>
         </header>
         <script src="scripts/data.js"></script>
         <main>
             <h2>Member directory</h2>
-            <div class="directory-controls">
+            <div class="directory">
                 <p>Toggle display: <button id="list-toggle">Grid/List</button></p>
             </div>
             <div class="directory-cards" id="cards-container">

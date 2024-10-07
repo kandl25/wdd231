@@ -142,6 +142,7 @@ footer {
   .navigation li {
     display: block;
     flex: 1 1 100%;
+    grid-template-rows: 1fr;
   }
   .navigation a {
     text-align: center;
