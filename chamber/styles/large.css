@@ -3,7 +3,6 @@
         display: flex;
         align-items: center;
     }
-
     .navigation li {
         display: block;
         flex: 1 1 100%;
@@ -21,7 +20,7 @@
     .directory-controls {
         grid-template-columns: repeat (auto-fit, minmax(250px, 350fr));
     }
-    .course .location .bottom {
+    .directory {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
 }
