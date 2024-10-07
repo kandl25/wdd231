@@ -14,7 +14,7 @@ header {
   border: var(--border);
   align-content: space-around;
   color: #bf0603;
-  animation: gradientShift 15s infinite;
+  animation: gradientShift 5s infinite;
 }
 .head {
   display: flex;

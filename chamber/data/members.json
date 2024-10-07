@@ -1,66 +1,66 @@
 {
   "members": [
     {
-      "name": "Riman Korean Beauty",
-      "address": "10809 N 5800 W",
-      "city": "American Fork, UT 84003",
-      "phone_number": "801-888-4502",
-      "website_url": "http://riman.com/",
-      "image": "https://docuteam.b-cdn.net/img.php?store=141056&type=logo",
+      "name": "Pevensie Tea Room",
+      "address": "#",
+      "city": "Pevensie, RM 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://pevtea.fake/",
+      "image": "images/tea.webp",
       "membership_level": "Gold"
     },
     {
-      "name": "Cascade Collision",
-      "address": "175 N 1200 E",
-      "city": "Lehi, UT 84043",
-      "phone_number": "801-919-8852",
-      "website_url": "http://cascadecollision.com/",
-      "image": "https://docuteam.b-cdn.net/img.php?store=36965&type=logo",
+      "name": "Aslan's Enchanted Apothecary",
+      "address": "12 Enchanted Dr",
+      "city": "Stone Table, MG 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://enchantedapothecary.fake/",
+      "image": "images/apothecary.webp",
       "membership_level": "Gold"
     },
     {
-      "name": "Mi Ranchito",
-      "address": "396 E State St",
-      "city": "American Fork, UT 84003",
-      "phone_number": "801-756-6138",
-      "website_url": "http://miranchitoamericanfork.com/",
-      "image": "https://docuteam.b-cdn.net/img.php?store=17496&type=logo",
-      "membership_level": "Gold"
-    },
-    {
-      "name": "Sherwin-Williams",
-      "address": "176 NW State St",
-      "city": "American Fork, UT 84003",
-      "phone_number": "801-756-1910",
-      "website_url": "http://sherwin-williams.com/",
-      "image": "https://docuteam.b-cdn.net/img.php?store=102254&type=logo",
-      "membership_level": "Gold"
-    },
-    {
-      "name": "Costa Vida",
-      "address": "643 W Pacific Dr",
-      "city": "American Fork, UT 84003",
-      "phone_number": "925-580-1893",
-      "website_url": "http://costavida.com/",
-      "image": "https://docuteam.b-cdn.net/img.php?store=13766&type=logo",
+      "name": "Narnian Adventure Tours",
+      "address": "753 Middle of Nowhere Rd",
+      "city": "Scottland Cliffs, SL 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://narniatours.fake/",
+      "image": "images/narnian.webp",
       "membership_level": "Silver"
     },
     {
-      "name": "Kids Dental Home",
-      "address": "332s 500e",
-      "city": "American Fork, UT 84003",
-      "phone_number": "385-644-5437",
-      "website_url": "http://kidsdentalhomeutah.com",
-      "image": "https://docuteam.b-cdn.net/img.php?store=116905&type=logo",
+      "name": "The Wardrobe Boutique",
+      "address": "77 Warbdrobe Way",
+      "city": "Wardrobe, Eng 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://hiddenboutique.fake/",
+      "image": "images/wardrobe.webp",
+      "membership_level": "Platinum"
+    },
+    {
+      "name": "White Witch Frozen Treats",
+      "address": "66 Stonehedge Way",
+      "city": "Antartica, GLB 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://witchyfrozentreats.fake/",
+      "image": "images/witch.webp",
       "membership_level": "Silver"
     },
     {
-      "name": "Odyssey Charter School",
-      "address": "738 East Quality Drive",
-      "city": "American Fork, UT 84003",
-      "phone_number": "801-492-8105",
-      "website_url": "http://www.odysseycharter.net/",
-      "image": "https://docuteam.b-cdn.net/img.php?store=116971&type=logo",
+      "name": "Mr. Thomnas Stories",
+      "address": "123 Lamppost Dr",
+      "city": "Hidden Cavern, SL 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://thomnasbooks.fake",
+      "image": "images/stories.webp",
+      "membership_level": "Platinum"
+    },
+    {
+      "name": "Caspian's Roayl Furniture",
+      "address": "738 Kingdom Dr",
+      "city": "Narnia, GLB 98765",
+      "phone_number": "777-555-5555",
+      "website_url": "http://caspianfurniture.fake/",
+      "image": "images/caspian.webp",
       "membership_level": "Silver"
     }
   
