@@ -19,6 +19,10 @@ header {
 .head {
   display: flex;
   align-items: flex-start;
+  cursor: pointer;
+}
+h1 {
+  color: #bf0603;
   text-align: center;
 }
 /******* Hamburger Nav *******/
@@ -62,9 +66,8 @@ header {
 /******* Mid Page *******/
 
 
-/*******directory ********/
-.directory-controls {
-  background-color: var(--primary-color);
+/*******directory *********/
+.directory {
   color: var(--primary-color-text);
   padding: 10px;
   border-radius: 10px;   
@@ -138,10 +141,6 @@ header {
 .company-card > .membership.gold {
   background-color: #e4cf7c;
   color: black;
-}
-body.dark-mode .company-card {
-  background-color: var(--dark-card-color);
-  box-shadow: none;
 }
 
 /******* Bottom Page *******/

@@ -1,4 +1,3 @@
-// DOM objects to use
 const listToggle = document.querySelector("#view");
 
 listToggle.addEventListener('click', () => {
@@ -20,7 +19,7 @@ const displayMembers = (members) => {
 
   members.forEach(member => {
     const card = document.createElement("div");
-    card.classList.add("company-card");
+    card.classList.add("directory");
 
     const name = document.createElement("p");
     name.classList.add("name");
@@ -54,15 +53,15 @@ const displayMembers = (members) => {
 
     const membership = document.createElement("p")
     membership.classList.add("membership");
-    if(member.membership == "platinum") {
+    if(member.membership === "Platinum") {
         membership.classList.add("platinum");
         membership.textContent = "Platinum Member";
     }
-    if(member.membership == "silver") {
+    if(member.membership === "Silver") {
         membership.classList.add("silver");
         membership.textContent = "Silver Member";
     }
-    if(member.membership == "gold") {
+    if(member.membership === "Gold") {
         membership.classList.add("gold");
         membership.textContent = "Gold Member";
     }
