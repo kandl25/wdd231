@@ -6,7 +6,7 @@
       "phone": "777-555-5555",
       "url": "http://pevtea.fake/",
       "image": "images/tea.webp",
-      "membership": "Gold"
+      "membership": 3
     },
     {
       "name": "Aslan's Enchanted Apothecary",
@@ -14,7 +14,7 @@
       "phone": "777-555-5555",
       "url": "http://enchantedapothecary.fake/",
       "image": "images/apothecary.webp",
-      "membership": "Gold"
+      "membership": 3
     },
     {
       "name": "Narnian Adventure Tours",
@@ -22,7 +22,7 @@
       "phone": "777-555-5555",
       "url": "http://narniatours.fake/",
       "image": "images/narnian.webp",
-      "membership": "Silver"
+      "membership": 2
     },
     {
       "name": "The Wardrobe Boutique",
@@ -30,7 +30,7 @@
       "phone": "777-555-5555",
       "url": "http://hiddenboutique.fake/",
       "image": "images/wardrobe.webp",
-      "membership": "Platinum"
+      "membership": 1
     },
     {
       "name": "White Witch Frozen Treats",
@@ -38,7 +38,7 @@
       "phone": "777-555-5555",
       "url": "http://witchyfrozentreats.fake/",
       "image": "images/witch.webp",
-      "membership": "Silver"
+      "membership": 2
     },
     {
       "name": "Mr. Thomnas Stories",
@@ -46,7 +46,7 @@
       "phone": "777-555-5555",
       "url": "http://thomnasbooks.fake",
       "image": "images/stories.webp",
-      "membership": "Platinum"
+      "membership": 1
     },
     {
       "name": "Caspian's Royal Furniture",
@@ -54,7 +54,7 @@
       "phone": "777-555-5555",
       "url": "http://caspianfurniture.fake/",
       "image": "images/caspian.webp",
-      "membership": "Silver"
+      "membership": 2
     }
   
   ]

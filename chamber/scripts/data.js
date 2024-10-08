@@ -1,9 +1,9 @@
 // DOM objects to use
-/*const listToggle = document.querySelector("#list-toggle");
+const listToggle = document.querySelector("#view");
 
 listToggle.addEventListener('click', () => {
   cardsContainer.classList.toggle('list');
-});*/
+});
 
 const cardsContainer = document.querySelector("#cards");
 const url = "https://kandl25.github.io/wdd231/chamber/data/members.json";
@@ -53,15 +53,16 @@ const displayMembers = (members) => {
     card.appendChild(url);
 
     const membership = document.createElement("p")
-    membership.classList.add("platinum");
+    membership.classList.add("membership");
     if(member.membership == "platinum") {
+        membership.classList.add("platinum");
         membership.textContent = "Platinum Member";
     }
-    if(member.membership == 2) {
+    if(member.membership == "silver") {
         membership.classList.add("silver");
         membership.textContent = "Silver Member";
     }
-    if(member.membership == 3) {
+    if(member.membership == "gold") {
         membership.classList.add("gold");
         membership.textContent = "Gold Member";
     }
