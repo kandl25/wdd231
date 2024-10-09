@@ -94,6 +94,10 @@ nav {
   color: white;
   margin-bottom: 10px;
 }
+.img{
+  width: 250px;
+  height: 250px;
+}
 .platinum {
   background-image: linear-gradient(to right, silver, gold);
   color: black;
