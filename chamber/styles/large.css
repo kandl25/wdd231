@@ -2,11 +2,20 @@
     header {
         display: flex;
         align-items: center;
+
+    }
+    li{
+        float:left;
+    }
+    li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 16px;
     }
     .navigation li {
         display: block;
         flex: 1 1 100%;
-        grid-template-rows: 1fr;
     }
     .navigation a {
         text-align: center;
@@ -14,14 +23,11 @@
     #menu {
         display: none;
     }
-    main {
-        margin: 10px;
-        grid-template-columns: repeat (auto-fit, minmax(250px, 350fr)); 
-    }
-   
-    .directory {
+    #cards {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      
+        gap: 10px;
     }
     footer {
         display: grid;

@@ -6,49 +6,55 @@
   --padding: 5px;
   --accent: #ffcf67;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* colors: red bf0603, yellow ffcf67, black and white for text */
 
 /***** top of page *****/
 header {
   display: flex;
   border: var(--border);
-  align-content: space-evenly;
+  margin: auto;
+  padding: 10px;
+  align-content: center;
+  justify-content: space-evenly;
   color: #bf0603;
-  animation: gradientShift 5s infinite;
-}
-.head {
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
 }
 h1 {
   color: #bf0603;
   text-align: center;
+  margin-top: 20px;
 }
 /******* Hamburger Nav *******/
+nav {
+  display: block;
+  flex-direction: column;
+}
 #menu {
   display: block;
   text-decoration: none;
   padding: 5px;
 }
 #menu::before{
-  content: "☰";
+  content: "≡";
   font-size: x-large;
 }
 .navigation {
   list-style: none;
   margin: 0 auto;
-  max-width: 760px;
+  text-align: center;
 }
 .navigation li {
   display: none;
 }
 .navigation a {
-  display: flex;
-  flex-direction: column;
+  display: block;
   text-align: center;
   color: var(--background);
-  transition: 5s;
+  animation: gradientShift 5s infinite;
 }
 .navigation a:hover, .navigation a:active{
   background-color: #bf0603;
@@ -58,89 +64,51 @@ h1 {
 .show li {
   display: block;
 }
-#menu.show::before {
+#menu.show::after {
   content: "X";
   font-size: x-large;
 }
 
 /******* Mid Page *******/
-
+.top{
+  text-align: center;
+  align-content: center;
+  background-color: var(--background);
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
 
 /*******directory *********/
 .directory {
-  color: var(--primary-color-text);
-  padding: 10px;
-  border-radius: 10px;   
-}
-.directory-controls button {
-  border-radius: 10%;
-  padding: 5px;
-  min-width: 100px;
-  background-color: var(--accent2-color);
-  border: none;
-}
-.directory-controls button:hover {
-  background-color: var(--accent1-color);
-}
-.directory-cards {
-  margin: 10px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 325fr));
-  row-gap: 5px;
-  column-gap: 5px;
-  padding: 20px;
-}
-.directory-cards.list {
-  margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-.company-card {
-  background-color: var(--accent2-color);
-  border: 1px solid black ;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 8px 0 #00000080;
-  text-align: center;
-}
-.directory-cards.list > .company-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.company-card > .name {
-  font-size: 1.5em;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.company-card > img {
-  margin: 5px;
-}
-.directory-cards.list > .company-card > img {
+  color: #bf0603;
   margin: 10px;
+  padding: 10px;
+  border: 3px double #ffcf67;
+  border-radius: 25px;
+  text-align: center; 
 }
-.company-card > .address {
-  text-align: left;
-  margin-bottom: 10px;
-  min-height: 35px;
-}
-.company-card > .url {
-  margin-bottom: 10px;
-}
-.company-card > .membership {
-  background-color: #362c2c;
+.name {
+  background-color: var(--background);
+  border-radius: 15px 30px;
   color: white;
+  margin-bottom: 10px;
+}
+.platinum {
+  background-image: linear-gradient(to right, silver, gold);
+  color: black;
   border-radius: 10px;
   padding: 3px;
 }
-.company-card > .membership.silver {
+.silver {
   background-color: #c0c0c0;
   color: black;
+  border-radius: 10px;
 }
-.company-card > .membership.gold {
+.gold {
   background-color: #e4cf7c;
   color: black;
+  border-radius: 10px;
 }
 
 /******* Bottom Page *******/

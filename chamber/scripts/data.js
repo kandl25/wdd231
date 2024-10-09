@@ -21,7 +21,7 @@ const displayMembers = (members) => {
     const card = document.createElement("div");
     card.classList.add("directory");
 
-    const name = document.createElement("p");
+    const name = document.createElement("h2");
     name.classList.add("name");
     name.textContent = member.name;
     card.appendChild(name);
