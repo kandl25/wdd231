@@ -117,6 +117,8 @@ nav {
 
 /******* Bottom Page *******/
 footer {
+  display: flex;
+  margin: auto;
   background-color: var(--background);
   text-align: center;
   padding: 20px;
