@@ -8,14 +8,16 @@
         <meta name="author" content="Kaylee DeCamps">
         <meta property="og:title" content="Kaylee DeCamps WDD 231">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://raw.githubusercontent.com/kandl25/wdd231/refs/heads/main/chamber/images/commercelogo.webp">
-        <meta property="og:url" content="https://kandl25.github.io/wdd231/chamber/index.html">
-        
+        <meta property="og:image" content="">
+        <meta property="og:url" content="https://kandl25.github.io/wdd231/index.html">
+    
         <link rel="stylesheet" href="styles/stylesheet.css">
+        <link rel="stylesheet" href="styles/weatherstyles.css">
         <link rel="stylesheet" href="styles/large.css">
         <link rel="icon" href="chamber/favicon.ico">
 
         <script src="scripts/main.js"></script>
+        <script src="scripts/weather.js"></script>
     </head>
     <body>
         <header>
@@ -33,17 +35,28 @@
             </ul>
         </nav>
         </header>
-        
+        </header>
         <main>
-            <section class="top">
-                <h2>Member directory</h2>
-                <button id="view">Grid/List</button>
+            <img class="hero" src="#" alt="Large Website Image" width="" height="">
+            <section class="join">
+                <a href="join.html">JOIN NOW</a>
             </section>
-            <div id="cards">
-                <div id="directory"></div>
+            <div id="event">
+                <h2 class="events">Events</h2>
+                <p></p>
+            </div>
+            <div id="weather">
+                <h2>Current Weather<span id="current-temp">🌞</span></h2>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <h2 class="forecast">Weather Forecast</h2>
+            </div>
+            <div id="spotlight">
+
             </div>
         </main>
-       <script src="scripts/data.js"></script>
         <footer>
             <div class="left">
                 <p>Chamber of Commerce<br>
@@ -66,7 +79,6 @@
                 <p class="modified">
                     <span id="lastmodified"></span>
                 </p>
-            </div>  
         </footer>
     </body>
 </html>
