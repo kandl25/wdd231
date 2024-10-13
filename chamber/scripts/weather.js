@@ -25,10 +25,6 @@ function displayResults(weatherData) {
 
     const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     const desc = weatherData.weather[0].description;
-    const capDesc = desc.split(" ").map(word => {
-        let firstLetter = word.charAt(0).toUpperCase();
-        return`${firstLetter}${word.slice(1)}`;
-    }).join(" ")
 
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);

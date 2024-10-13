@@ -11,13 +11,10 @@
         <meta property="og:image" content="">
         <meta property="og:url" content="https://kandl25.github.io/wdd231/index.html">
     
-        <link rel="stylesheet" href="styles/stylesheet.css">
-        <link rel="stylesheet" href="styles/weatherstyles.css">
+        <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/large.css">
         <link rel="icon" href="chamber/favicon.ico">
 
-        <script src="scripts/main.js"></script>
-        <script src="scripts/weather.js"></script>
     </head>
     <body>
         <header>
@@ -35,9 +32,12 @@
             </ul>
         </nav>
         </header>
-        </header>
         <main>
-            <img class="hero" src="#" alt="Large Website Image" width="" height="">
+            <picture class="hero">
+                <source id="small" srcset="images/small.webp" media="(max-width: 740px)" loading="lazy">
+                <source id="big" srcset="images/large.webp" media="(max-width: 800px)" loading="lazy">
+                <img src="images/large.webp" alt="Narnia" loading="lazy">
+            </picture>
             <section class="join">
                 <a href="join.html">JOIN NOW</a>
             </section>
@@ -80,5 +80,7 @@
                     <span id="lastmodified"></span>
                 </p>
         </footer>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/weather.js"></script>
     </body>
 </html>
