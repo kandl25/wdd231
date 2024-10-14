@@ -1,12 +1,20 @@
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#wather-icon');
-const captionDesc = document.querySelector('figcaption');
+const currentTemp = document.querySelector('#temperature');
+const weatherIcon = document.querySelector('#graphic');
+const captionDesc = document.querySelector('#description');
+const weatherToday = document.querySelector('#today');
+const weatherTomorrow = document.querySelector('#tomorrow');
+const weatherNext = document.querySelector('#next-day');
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=43.826&lon=-111.7897&units=imperial&appid=ac0affaa84bb8da3300470fa6a1fd7ee';
+const key = "ac0affaa84bb8da3300470fa6a1fd7ee"
+const lat = "43.82280560320428"
+const long = "-111.79247443396717"
+
+const currentURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=imperial`;
+const futureURL = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${key}&units=imperial`;
 
 async function apiFetch() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(currentURL);
         if (response.ok) {
             const data = await response.json();
             console.log(data);
@@ -20,13 +28,3 @@ async function apiFetch() {
 
 apiFetch();
 
-function displayResults(weatherData) {
-    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description;
-
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
-    captionDesc.textContent = desc;
-}

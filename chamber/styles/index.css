@@ -17,7 +17,7 @@
 header {
     display: flex;
     border: var(--border);
-    margin: auto;
+    margin: 10px;
     padding: 10px;
     align-content: center;
     justify-content: space-evenly;
@@ -30,17 +30,19 @@ h1 {
 }
   /******* Hamburger Nav *******/
 nav {
-    display: block;
+    display: flex;
     flex-direction: column;
 }
 #menu {
     display: block;
     text-decoration: none;
     padding: 5px;
+    text-align: center;
 }
 #menu::before{
     content: "≡";
     font-size: x-large;
+    justify-content: center;
 }
 .navigation {
     list-style: none;
@@ -72,7 +74,7 @@ nav {
 /******** Mid Page **********/
 .join{
     position: absolute;
-    top: 150px;
+    top: 250px;
     right: 50px;
     border: 0;
     cursor: pointer;
@@ -102,6 +104,10 @@ h2{
 div {
     border: var(--border);
     margin: 10px;
+    padding: 10px;
+}
+h3, p {
+    text-align: center;
 }
 #weather-icon {
     width: 100px;

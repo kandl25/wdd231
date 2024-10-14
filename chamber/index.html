@@ -13,7 +13,7 @@
     
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/large.css">
-        <link rel="icon" href="chamber/favicon.ico">
+        <link rel="favicon" href="chamber/icon.ico">
 
     </head>
     <body>
@@ -22,19 +22,20 @@
                 <img class="logo" src="images/commercelogo.webp" alt="Narnia Commerce" width="100" height="100">
             </a>
             <h1>Narnia Chamber of Commerce</h1>
-        <a id="menu"></a>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Discover</a></li>
-            </ul>
-        </nav>
         </header>
+        <div id="menu">
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
         <main>
             <picture class="hero">
-                <source id="small" srcset="images/small.webp" media="(max-width: 740px)" loading="lazy">
+                <source id="small" srcset="images/small.webp" media="(max-width: 750px)" loading="lazy">
                 <source id="big" srcset="images/large.webp" media="(max-width: 800px)" loading="lazy">
                 <img src="images/large.webp" alt="Narnia" loading="lazy">
             </picture>
@@ -43,15 +44,22 @@
             </section>
             <div id="event">
                 <h2 class="events">Events</h2>
-                <p></p>
+                <h3>Ribbon Cutting:</h3>
+                <h3>Aslan's Enchanted Apothecary</h3>
+                <p>Join us in celebrating our new location</p>
+                <p>Friday 10/12 | 4:00pm | Seawall St</p>
             </div>
-            <div id="weather">
-                <h2>Current Weather<span id="current-temp">🌞</span></h2>
-                <figure>
-                    <img id="weather-icon" src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
+            <div id="current-weather">
+                <h2>Current Weather<span>🌞</span></h2>
+                <img id="graphic" src="" alt="">
+                <p id="description"></p>
+                <p id="temperature"></p>
+            </div> 
+            <div id="forecast">  
                 <h2 class="forecast">Weather Forecast</h2>
+                <p id="today"></p>
+                <p id="tomorrow"></p>
+                <p id="next-day"></p>
             </div>
             <div id="spotlight">
 
@@ -74,7 +82,7 @@
             <div class="right">
                 <p class="copywright"> &copy; 
                     <span id="currentyear"></span>
-                    Kaylee DeCamps | Idaho USA
+                    Kaylee DeCamps | Idaho USA | OpenWeatherMap.org | CC By-SA 4.0
                 </p>
                 <p class="modified">
                     <span id="lastmodified"></span>
