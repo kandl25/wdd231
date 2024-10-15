@@ -89,10 +89,9 @@ nav {
 .join a:hover {
     color: blue;
 }
-.hero img{
-    width: auto;
-    height: 100%;
-    max-width: 100%;
+.hero {
+    display: flex;
+    justify-content: center;
 }
 h2{
     text-align: center;
@@ -112,7 +111,6 @@ h3, p {
 #current-weather, #forecast {
     text-align: center;
     margin: 5px;
-    
 }
 /******* Bottom Page *******/
 footer {
