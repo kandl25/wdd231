@@ -1,9 +1,5 @@
 @media screen and (min-width: 750px) {
-    header {
-        display: flex;
-        align-items: center;
-
-    }
+    
     li{
         float:left;
     }
@@ -13,7 +9,7 @@
         text-decoration: none;
         padding: 14px 16px;
     }
-    .navigation li {
+    nav {
         display: block;
         flex: 1 1 100%;
     }
@@ -28,6 +24,17 @@
         grid-template-columns: auto auto auto auto;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         gap: 10px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+    }
+    .hero {
+        grid-column: 1 / 4;
+    }
+    #spotlight {
+        grid-column: 1 / 4;
     }
     footer {
         display: grid;
