@@ -109,8 +109,10 @@ div {
 h3, p {
     text-align: center;
 }
-#weather-icon {
-    width: 100px;
+#current-weather, #forecast {
+    text-align: center;
+    margin: 5px;
+    
 }
 /******* Bottom Page *******/
 footer {
