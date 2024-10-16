@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WDD 231 -Chamber of Commerce - Kaylee DeCamps</title>
-        <meta name="decription" content="WDD 231 Chamber of Commerce Assignment" />
+        <meta name="decription" content="WDD 231 Chamber of Commerce Assignment">
         <meta name="author" content="Kaylee DeCamps">
         <meta property="og:title" content="Kaylee DeCamps WDD 231">
         <meta property="og:type" content="website">
@@ -35,8 +35,8 @@
         </div>
         <main>
             <picture class="hero">
-                <source id="small" srcset="images/small.webp" media="(max-width: 750px)" loading="lazy" width="300" height="300">
-                <source id="big" srcset="images/large.webp" media="(max-width: 800px)" loading="lazy" width="600" height="350">
+                <source id="small" srcset="images/small.webp" media="(max-width: 750px)" width="300" height="300">
+                <source id="big" srcset="images/large.webp" media="(max-width: 800px)">
                 <img src="images/large.webp" alt="Narnia" loading="lazy" width="800" height="450">
             </picture>
             <section class="join">
@@ -51,7 +51,7 @@
             </div>
             <div id="current-weather">
                 <h2>Current Weather<span>🌞</span></h2>
-                <img id="graphic" src="" alt="">
+                <img id="graphic" src="" alt="" width="50" height="50">
                 <p id="description"></p>
                 <p id="temperature"></p>
             </div> 
@@ -87,8 +87,10 @@
                 <p class="modified">
                     <span id="lastmodified"></span>
                 </p>
+            </div>
         </footer>
         <script src="scripts/main.js"></script>
         <script src="scripts/weather.js"></script>
+        <script src="scripts/spotlight.js"></script>
     </body>
 </html>
