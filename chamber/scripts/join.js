@@ -1,3 +1,24 @@
+const url = ""
+
+async function getLevelData() {
+    const response = await fetch(url);
+    if (response.ok) {
+        const data = await response.json();
+        npButton.addEventListener("click", () => {
+            displayModal(data, nonProfitMem, 0);
+        })
+        standardButton.addEventListener("click", () => {
+            displayModal(data, standardMem, 1);
+        })
+        silverButton.addEventListener("click", () => {
+            displayModal(data, silverMem, 2);
+        })
+        goldButton.addEventListener("click", () => {
+            displayModal(data, goldMem, 3);
+        })
+    }
+}
+
 const nonProfitMem = document.querySelector("#non-profit");
 const standardMem = document.querySelector("#standard");
 const silverMem = document.querySelector("#silver");
@@ -43,7 +64,6 @@ function displayModal(data, modal, index) {
 getLevelData();
 
 // Create Timestamp
-
 function getTime() {
     const date = new Date();
     const formattedDate = date.toLocaleString('en-US', {

@@ -1,101 +1,77 @@
+/****media view****/
+:root {
+    --background: #bf0603;
+    --border: 3px solid #bf0603;
+    --text-align: center;
+    --padding: 5px;
+    --accent: #ffcf67;
+}
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-:root {
-    --primary-color: #799c40;
-    --secondary-color: #4c6226;
-    --header-text-c: white;
-    --subheader-text-c: #9d6841;
-    --header-font: "Dosis", sans-serif;
-    --button-font: "Concert One", sans-serif;
-    --business-title-font: "Poppins", sans-serif;
-    --business-text-font: "Halant", serif;
-}
+  /* colors: red bf0603, yellow ffcf67, black and white for text */
+  
+/***** top of page *****/
 header {
-    display: grid;
-    grid-template-columns: 150px 100px auto;
-    color: var(--header-text-c);
-    background-color: var(--primary-color);
-    height: 145px;
-    width: 100%;
-}
-#logo {
-    align-self: center;
+    display: flex;
+    border: var(--border);
+    margin: 10px;
     padding: 10px;
+    align-content: center;
+    justify-content: space-evenly;
+    color: #bf0603;
 }
-#logo img {
-    box-shadow: rgba(55, 38, 38, 0.24) 0px 3px 8px;
+h1 {
+    color: #bf0603;
+    text-align: center;
+    margin-top: 20px;
 }
-
-header h1 {
-    align-self: center;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    font-family: var(--header-font);
-    font-size: 1.3rem;
-}
-
-#menuButton {
-    font-size: 3rem;
-    background: none;
-    border: none;
-    color: var(--header-text-c);
-    cursor: pointer;
-    text-align: right;
-    padding: .25rem 2vw;
-    align-self:start;
-}
-#menuButton::before {
-    content: "☰"
-}
-#menuButton.open::before {
-    content: "x"
-}
-
+  /******* Hamburger Nav *******/
 nav {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.4s ease-out;
-    background-color: var(--secondary-color);
-    width: 100vw;
-    list-style-type: none;
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
 }
-nav ul {
-    overflow: hidden;
-}
-nav.open {
-    grid-template-rows: 1fr;
-    background-color: var(--secondary-color);
-    width: 100vw;
-}
-
-ul.menuLinks li a {
+#menu {
     display: block;
     text-decoration: none;
-    color: var(--header-text-c);
-    font-size: 1.5rem;
-    font-family: var(--business-title-font);
-    font-weight: 600;
-    padding: 10px;
-}
-ul.menuLinks li a:hover {
-    background-color:#6b8e2d;
-}
-.wayfinding, .wayfinding:hover {
-    background-color: #6b8e2d!important;
-    padding: 10px;
-}
-
-h2 {
-    font-family: var(--business-title-font);
-    font-size: 1.6rem;
-    margin: 10px;
+    padding: 5px;
     text-align: center;
 }
+#menu::before{
+    content: "≡";
+    font-size: x-large;
+    justify-content: center;
+}
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.navigation li {
+    display: none;
+}
+.navigation a {
+    display: block;
+    text-align: center;
+    color: var(--background);
+    animation: gradientShift 5s infinite;
+}
+.navigation a:hover, .navigation a:active{
+    background-color: #bf0603;
+    color: white;
+    cursor: pointer;
+}
+.show li {
+    display: block;
+}
+#menu.show::after {
+    content: "X";
+    font-size: x-large;
+}
 
+/******* Join Form *********/
 form {
     margin: 1rem 2%;
 }
@@ -309,26 +285,6 @@ input[type=submit]:hover {
     }
     
 }
-
-footer {
-    display: block;
-    background-color: var(--primary-color);
-    color: var(--header-text-c);
-    font-family: var(--header-font);
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-#social-links {
-    display: flex;
-    align-items: center;
-}
-
-footer p {
-    padding: 8px;
-    margin: 10px;
-}
-
 #results-card {
     background-color: rgb(246, 238, 151);
     border: 2px solid rgb(239, 225, 67);
@@ -346,7 +302,6 @@ to{
     opacity: 1;
 }
 }
-
 #results-card h3 {
     padding-top: 5px;
     padding-left: 5px;
@@ -357,10 +312,22 @@ to{
     padding: 15px;
     font-family: var(--business-text-font);
 }
-
 #thank-you p {
     font-family: var(--business-text-font);
     text-align: center;
     margin: 10px;
     margin-top: 30px;
+}
+
+/******* Bottom Page *******/
+footer {
+    margin: 10px;
+    background-color: var(--background);
+    text-align: center;
+    padding: 20px;
+    color:white;
+}
+.icons img {
+    border: 3px solid whitesmoke;
+    margin: 5px;
 }
