@@ -34,38 +34,48 @@
             </nav>
         </div>
         <main>
-            <picture class="hero">
-                <source id="small" srcset="images/small.webp" media="(max-width: 750px)" width="300" height="300">
-                <source id="big" srcset="images/large.webp" media="(max-width: 800px)">
-                <img src="images/large.webp" alt="Narnia" loading="lazy" width="800" height="450">
-            </picture>
-            <div>
-                <section class="join">
-                    <a href="join.html">JOIN NOW</a>
-                </section>
+            <h2 id="application-header">Membership Enrollment</h2>
+
+        <form method="GET" action="thankyou.html" id="form-body">
+            <label>First Name: <input type="text" required name="first" autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name: <input type="text" required name="last" autocomplete="family-name" title="Your Last Name"></label>
+            <label>Email: <input type="email" required name="email" autocomplete="email" title="Your Email" placeholder="joinus@murraypark"></label>
+            <label>Phone #: <input type="tel" required name="phone" autocomplete="tel" title="Your Phone Number"></label>
+            <label>Organization Title: <input type="text" name="title" autocomplete="organization-title" title="Your Organization Title"></label>
+            <label>Organization Name: <input type="text" required name="organization" autocomplete="organization" title="Name of Your Organization"></label>
+            <label>Organization Description: <textarea title="Describe Your Organization" name="description" id="description"></textarea></label>
+
+            <h3>Select Membership Level</h3>
+            <label><input type="radio" name="membership" checked value="Standard">Silver Membership</label>
+            <label><input type="radio" name="membership" value="Silver">Gold Membership</label>
+            <label><input type="radio" name="membership" value="Gold">Platinum Membership</label>
+
+            <label><input type="hidden" name="timestamp" id="timestamp" value=""></label>
+            <label><input type="submit" value="Request Membership"></label>
+        </form>
+        <h2 id="memberships-header">Membership Levels</h2>
+        <div id="membership-cards">
+            <div class="membership-card" id="np-card">
+                <h3>Non-Profit Level</h3>
+                <button id="np-button">Learn More</button>
             </div>
-            <div id="event">
-                <h2 class="events">Events</h2>
-                <h3>Ribbon Cutting:</h3>
-                <h3>Aslan's Enchanted Apothecary</h3>
-                <p>Join us in celebrating our new location</p>
-                <p>Friday 10/12 | 4:00pm | Seawall St</p>
+            <div class="membership-card" id="standard-card">
+                <h3>Standard Level</h3>
+                <button id="standard-button">Learn More</button>
             </div>
-            <div id="current-weather">
-                <h2>Current Weather<span>🌞</span></h2>
-                <img id="graphic" width="50" height="50">
-                <p id="description"></p>
-                <p id="temperature"></p>
-            </div> 
-            <div id="forecast">  
-                <h2 class="forecast">Weather Forecast</h2>
-                <p id="today"></p>
-                <p id="tomorrow"></p>
-                <p id="next-day"></p>
+            <div class="membership-card" id="silver-card">
+                <h3>Silver Level</h3>
+                <button id="silver-button">Learn More</button>
             </div>
-            <div id="spotlight">
-                <h2>Business Spotlight</h2>
+            <div class="membership-card" id="gold-card">
+                <h3>Gold Level</h3>
+                <button id="gold-button">Learn More</button>
             </div>
+            <dialog class="membership-level" id="non-profit"></dialog>
+            <dialog class="membership-level" id="standard"></dialog>
+            <dialog class="membership-level" id="silver"></dialog>
+            <dialog class="membership-level" id="gold"></dialog>
+        </div>
         </main>
         <footer>
             <div class="left">
