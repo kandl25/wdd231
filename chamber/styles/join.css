@@ -179,7 +179,7 @@ input[type=submit]:hover {
     background-color: gold;
 }
 #platinum-card {
-    background-color: linear-gradient(to right, silver, gold);
+    background-image: linear-gradient(to right, silver, gold);
 }
 .membership-level {
     margin: 0 auto;
