@@ -1,33 +1,26 @@
-const url = ""
+const url = "https://github.com/kandl25/wdd231/blob/main/chamber/data/member-level.json"
+const silverMem = document.querySelector("#silver");
+const goldMem = document.querySelector("#gold");
+const platinumMem = document.querySelector("#platinum");
+const silverButton = document.querySelector("silver-button");
+const goldButton = document.querySelector("#gold-button");
+const platinumButton = document.querySelector("#platinum-button");
 
 async function getLevelData() {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
-        npButton.addEventListener("click", () => {
-            displayModal(data, nonProfitMem, 0);
-        })
-        standardButton.addEventListener("click", () => {
-            displayModal(data, standardMem, 1);
-        })
         silverButton.addEventListener("click", () => {
-            displayModal(data, silverMem, 2);
+            displayModal(data, silverMem, 0);
         })
         goldButton.addEventListener("click", () => {
-            displayModal(data, goldMem, 3);
+            displayModal(data, goldMem, 1);
+        })
+        platinumButton.addEventListener("click", () => {
+            displayModal(data, platinumMem, 2);
         })
     }
 }
-
-const nonProfitMem = document.querySelector("#non-profit");
-const standardMem = document.querySelector("#standard");
-const silverMem = document.querySelector("#silver");
-const goldMem = document.querySelector("#gold");
-
-const npButton = document.querySelector("#np-button");
-const standardButton = document.querySelector("#standard-button");
-const silverButton = document.querySelector("#silver-button");
-const goldButton = document.querySelector("#gold-button");
 
 function displayModal(data, modal, index) {
     modal.innerHTML = "";

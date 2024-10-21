@@ -2,7 +2,6 @@
 :root {
     --background: #bf0603;
     --border: 3px solid #bf0603;
-    --text-align: center;
     --padding: 5px;
     --accent: #ffcf67;
 }
@@ -75,202 +74,151 @@ nav {
 form {
     margin: 1rem 2%;
 }
-
 label {
-      display: block;
-      font-size: 1rem;
-      color: var(--subheader-text-c);
-      font-family: var(--business-text-font);
-      font-weight: bold;
-      padding-top: .2rem;
-      margin-top: 1rem;
-      margin-left: 12vw;
-    }
+    display: block;
+    color: black;
+    font-weight: bold;
+    padding-top: .2rem;
+    margin-top: 1rem;
+    margin-left: 12vw;
+}
 form h3 {
   text-align: center;  
-  font-size: 1.3rem;
-  font-family: var(--business-title-font);
-  color: var(--secondary-color);
+  background-color: var(--background);
+  color: white;
   margin-top: 1.5rem;
   margin-bottom: .8rem;
-  border-bottom: 1px solid #eee;
-}
-  
+  border-bottom: 1px solid white;
+}  
 input[type=text],
 input[type=tel],
 input[type=date],
 input[type=email]{
   display: block;
   padding: .3rem;
-  border: 1px solid #999;
+  border: var(--border);
   border-radius: 4px;
   border-left-width: 5px;
-  border-left-color:var(--secondary-color);
-  font-size: 1rem;
-  color: #3D405B;
+  border-left-color:var(--accent);
+  color: black;
   width: 250px;
 }
 textarea {
     display: block;
     padding: .3rem;
-    border: 1px solid #999;
+    border: var(--border);
     border-radius: 4px;
     border-left-width: 5px;
-    border-left-color:var(--secondary-color);
-    font-size: 1rem;
-    color: #3D405B;
+    border-left-color:var(--accent);
+    color: black;
     width: 250px;
 }
-
 input[type=radio]{
     margin-left: 12vw;
     margin-right: 6px;
 }
-
 input:required {
-    border-left-color: rgb(168, 15, 15);
+    border-left-color: var(--accent);
 }
 input:focus {
-    border-left-color: var(--secondary-color); outline:none;
+    border-left-color: black; outline:none;
 }
 input:required:valid{
-    border-left-color: var(--primary-color);
-}
-  
+    border-left-color: var(--background);
+} 
 input[type=submit] {
   border: none;
   text-align: center;
-  font-family: var(--button-font);
-  background-color: var(--secondary-color);
-  color: white;
   border-radius: 1rem;
   padding: .75rem 1.5rem;
   margin: 2rem 0;
   margin-top: 1rem;
-  font-size: 1.5rem;
   -webkit-appearance: none;
   appearance: none;
   transition: .5s;
 }
-
 input[type=submit]:hover {
     cursor: pointer;
     padding: .85rem 1.6rem;
     transition: .3s;
-    background-color: var(--header-text-c);
-    color: var(--secondary-color);
-    border: 3px solid var(--secondary-color);
+    border: var(--border);
 }
-
-
 #membership-cards {
     text-align: center;
 }
-
 .membership-card {
-    border: 3px solid var(--secondary-color);
+    border: var(--border);
     margin: 10px;
     padding: 20px;
-    font-family: var(--business-text-font);
     border-radius: 8px;
-    font-size: 1.2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .membership-card button {
     padding: 8px;
     margin: 10px;
-    font-size: 1rem;
-    height: 44px;
-    color: var(--header-text-c);
-    background-color: var(--secondary-color);
-    font-family: var(--business-title-font);
+    background-color: black;
+    color: white;
     border-radius: 15px;
     cursor: pointer;
 }
 .membership-card button:active {
-    background-color: white;
-    color: var(--secondary-color);
-}
-
-#standard-card {
-    background-color: #8bbd3b;
+    background-color: var(--accent);
 }
 #silver-card {
-    background-color: lightgrey;
+    background-color: silver;
 }
 #gold-card {
-    background-color: rgb(255, 195, 42);
+    background-color: gold;
 }
-
+#platinum-card {
+    background-color: linear-gradient(to right, silver, gold);
+}
 .membership-level {
     margin: 0 auto;
     margin-top: 30%;
     width: 90vw;
     height: 40vh;
-
 }
 .membership-level h3 {
     padding: 5px;
     margin: 5px;
-    font-size: 1.3rem;
-    font-family: var(--business-title-font);
-    background-color: var(--primary-color);
-    color: white;
 }
 .membership-level ul {
     text-align: left;
     list-style: circle;
     margin-left: 30px;
-    font-family: var(--business-text-font);
 }
-.membership-level p {
-    font-family: var(--business-text-font);
-    font-weight: bold;
-}
-
 .membership-level #close-modal {
     height: 44px;
     width: 44px;
     margin-top: 5px;
     position: absolute;
     left: 85%;
-    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    border: none;
-    background-color: white;
-    font-family: var(--business-title-font);
     color: lightslategrey;
 }
 .membership-level::backdrop {
     background-color: rgb(0 0 0 / 0.5);
 }
-
-#np-card {
-    animation-name: slidein;
-    animation-duration: 2.5s;
-    animation-direction: alternate;
-    animation-timing-function: ease;
-}
-#standard-card {
+#silver-card {
     animation-name: slidein;
     animation-duration: 3s;
     animation-direction: alternate;
     animation-timing-function: ease;
 }
-#silver-card {
+#gold-card {
     animation-name: slidein;
     animation-duration: 3.5s;
     animation-direction: alternate;
     animation-timing-function: ease;
 }
-#gold-card {
+#platinum-card {
     animation-name: slidein;
     animation-duration: 4s;
     animation-direction: alternate;
     animation-timing-function: ease;
 }
-
 @keyframes slidein {
     0%{
         transform: translate(150vw); 
@@ -286,8 +234,7 @@ input[type=submit]:hover {
     
 }
 #results-card {
-    background-color: rgb(246, 238, 151);
-    border: 2px solid rgb(239, 225, 67);
+    border: var(--border);
     width: 90%;
     margin: 0 auto;
     margin-top: 50px;
@@ -305,15 +252,12 @@ to{
 #results-card h3 {
     padding-top: 5px;
     padding-left: 5px;
-    font-family: var(--business-title-font);
 }
 #contact-details, #organization-details {
     list-style: none;
     padding: 15px;
-    font-family: var(--business-text-font);
 }
 #thank-you p {
-    font-family: var(--business-text-font);
     text-align: center;
     margin: 10px;
     margin-top: 30px;
