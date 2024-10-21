@@ -71,6 +71,14 @@ nav {
 }
 
 /******* Join Form *********/
+h2 {
+    background-color: var(--background);
+    color: white;
+    border: 3px dashed #ffcf67;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
 form {
     margin: 1rem 2%;
 }
