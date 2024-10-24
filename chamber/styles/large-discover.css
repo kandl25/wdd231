@@ -1,0 +1,31 @@
+@media screen and (min-width: 750px) {
+    li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 16px;
+    }
+    nav {
+        display: block;
+        flex: 1 1 100%;
+    }
+    .navigation a {
+        text-align: center;
+    }
+    #menu {
+        display: none;
+    }
+    #photo-container img {
+        transition: ease-out .4s;
+    
+    }
+    #photo-container img:hover {
+        transform: scale(1.05);
+    
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+    }
+}

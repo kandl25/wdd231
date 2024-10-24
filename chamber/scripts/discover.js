@@ -11,7 +11,7 @@ window.addEventListener("load", function (event) {
       "Welcome! Let us know if you have any questions";
     localStorage.setItem("lastVisit", Date.now());
   } else if (lastVisit && Date.now() - lastVisit < 86400000) {
-    discoverMessage.textContent = "Back so soon! Awesome!";
+    discoverMessage.textContent = "Welcome back!";
   } else if (lastVisit && Date.now() - lastVisit > 86400000) {
     let daysSinceLastVisit = Math.floor((Date.now() - lastVisit) / 86400000);
     if (daysSinceLastVisit > 1) {
