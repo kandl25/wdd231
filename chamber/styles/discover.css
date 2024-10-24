@@ -1,0 +1,19 @@
+#directory .cards {
+    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: var(--accent-color);
+    padding: 1rem;
+    width: 275px;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 330px;
+}
+.card p,
+.card address,
+.card img,
+.card caption {
+    padding: .12rem 0;
+}
