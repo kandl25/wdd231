@@ -1,18 +1,5 @@
 @media screen and (min-width: 750px) {
-    li a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        padding: 14px 16px;
-    }
-    nav {
-        display: block;
-        flex: 1 1 100%;
-    }
-    .navigation a {
-        text-align: center;
-    }
-    #menu {
+  /*  #menu {
         display: none;
     }
     #cards {
@@ -26,14 +13,26 @@
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
     }
-    .hero {
-        grid-column: 2 / 3;
+*/
+    .nav-button {
+        display: none;
     }
-    #event, #current-weather, #forecast {
-        grid-row: 2;
+
+    nav ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
     }
-    #spotlight {
-        grid-column: 1 / 4;
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+        padding: 0;
+    }
+
+    nav ul li a {
+        display: inline-block;
     }
     footer {
         display: grid;

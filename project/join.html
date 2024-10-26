@@ -36,16 +36,18 @@
         <section>
             <h2>Sign Up for a Class</h2>
             <p>Fill out the form below to join a class at Keep to the Beat.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="class">Select a Class:</label>
-                <select id="class" name="class">
+            <form method="GET" action="thankyou.html" id="form-body">
+                <label>Parent First Name: <input type="text" required name="first" autocomplete="given-name" title="Your First Name"></label>
+                <label>Parent Last Name: <input type="text" required name="last" autocomplete="family-name" title="Your Last Name"></label>
+                <label>Student First Name: <input type="text" required name="student-first" autocomplete="student-given" title="Your First Name"></label>
+                <label>Student Last Name: <input type="text" required name="student-last" autocomplete="student-family" title="Your Last Name"></label>
+                <label>Email: <input type="email" required name="email" autocomplete="email" title="Your Email" placeholder="joinus@murraypark"></label>
+                <label>Phone #: <input type="tel" required name="phone" autocomplete="tel" title="Your Phone Number"></label>
+                <label>Student Age: <input type="number" name="age" autocomplete="number" title="age"></label>
+                <label>Student DOB (MM/DD/YYYY): <input type="date" required name="birthday" autocomplete="(MM/DD/YYYY)" title="Student Birthday"></label>
                     <option value="ballet">Ballet</option>
                     <option value="hiphop">Hip-Hop</option>
-                    <option value="salsa">Salsa</option>
+                    <option value="salsa">Ballroom</option>
                     <option value="jazz">Jazz</option>
                 </select>
                 <button type="submit">Join</button>
@@ -72,5 +74,5 @@
         </div>
     </footer>
     <script src="scripts/main.js"></script>
-
+    <script src="scripts/join.js"></script>
 </html>
