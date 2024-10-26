@@ -1,0 +1,43 @@
+@media screen and (min-width: 750px) {
+    li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 16px;
+    }
+    nav {
+        display: block;
+        flex: 1 1 100%;
+    }
+    .navigation a {
+        text-align: center;
+    }
+    #menu {
+        display: none;
+    }
+    #cards {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        gap: 10px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    .hero {
+        grid-column: 2 / 3;
+    }
+    #event, #current-weather, #forecast {
+        grid-row: 2;
+    }
+    #spotlight {
+        grid-column: 1 / 4;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+    }
+}
