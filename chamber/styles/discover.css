@@ -8,7 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 /***** top of page *****/
 header {
@@ -103,8 +103,9 @@ h3 {
 }
 figcaption {
     font-style: italic;
-    text-align: center;
-    justify-content: center;
+    /*text-align: right;*/
+    align-items: flex-end;
+    text-decoration: 2px underline #bf0603;
 }
 
 /******** Footer *******/
