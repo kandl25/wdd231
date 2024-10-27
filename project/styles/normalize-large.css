@@ -9,7 +9,15 @@
     nav ul li {
         flex: 1 1 100%
     }
-
+    /******** Home Page *********/
+    .home {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 200px;
+    }
+    .left {
+        width: 500px;
+    }
     /******** Footer *******/
     footer {
         display: grid;

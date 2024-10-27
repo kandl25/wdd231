@@ -37,6 +37,7 @@ nav ul li {
 }
 nav a {
     color: var(--text);
+    font-style: bold;
     text-align: center;
     text-decoration: none;
     padding: 10px;
@@ -45,49 +46,22 @@ nav a:hover{
     color: var(--gold);
     cursor: pointer;
 }
-/*nav a {
-    display: block;
-    color: var(--text);
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-}
-nav a:hover {
-    color: var(--gold);
-    cursor: pointer;
-}
-
-/* small view navigation 
-#menu {
-	font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: #000;
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-}
-
-#menu::before {
-	content: "☰";
-}
-
-#menu.open::after {
-	content: "❎";
-}
-
-
- when the button is clicked - the open class is toggled (added/removed) 
-.open a {
-	display: block;
-}*/
-
 main {
     margin: auto;
     padding: 20px;
 }
+h2{
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: 2px underline #e2a538;
+}
 h2, h3, p, label {
     font-family: Oswald;
+}
+.about, .content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 footer {
     background-color: var(--header);
