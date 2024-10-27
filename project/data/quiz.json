@@ -1,0 +1,30 @@
+[
+    {
+      "question": "What is your favorite type of music?",
+      "options": [
+        { "answer": "Classical", "danceStyle": "Ballet" },
+        { "answer": "Hip-Hop", "danceStyle": "Hip-Hop" },
+        { "answer": "Salsa", "danceStyle": "Ballroom" },
+        { "answer": "Jazz", "danceStyle": "Jazz" }
+      ]
+    },
+    {
+      "question": "Which environment do you prefer to dance in?",
+      "options": [
+        { "answer": "Theater stage", "danceStyle": "Ballet" },
+        { "answer": "Street", "danceStyle": "Hip-Hop" },
+        { "answer": "Ballroom", "danceStyle": "Ballroom" },
+        { "answer": "Nightclub", "danceStyle": "Jazz" }
+      ]
+    },
+    {
+      "question": "What kind of dance moves do you enjoy?",
+      "options": [
+        { "answer": "Elegant and precise", "danceStyle": "Ballet" },
+        { "answer": "Fast and sharp", "danceStyle": "Hip-Hop" },
+        { "answer": "Smooth and rhythmic", "danceStyle": "Ballroom" },
+        { "answer": "Energetic and free-form", "danceStyle": "Jazz" }
+      ]
+    }
+  ]
+  

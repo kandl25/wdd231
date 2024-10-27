@@ -1,75 +1,141 @@
-const questions = [
-    {
-        question: "What dance style is known for its quick, sharp movements and intricate footwork?",
-        answers: {
-            a: "Ballet",
-            b: "Tap Dance",
-            c: "Jazz",
-            d: "Hip Hop"
+document.addEventListener('DOMContentLoaded', function() {
+    const questions = [
+        {
+            image: "images/ballet-barre.webp",
+            question: "1. What is your favorite type of music?",
+            options: [
+                { answer: "Classical", danceStyle: "Ballet" },
+                { answer: "Rap", danceStyle: "Hip-Hop" },
+                { answer: "All Music", danceStyle: "Ballroom" },
+                { answer: "Up-beat", danceStyle: "Jazz" }
+            ]
         },
-        correctAnswer: "b"
-    },
-    {
-        question: "Which dance originated in Cuba and is characterized by its sensual hip movements and rhythmic footwork?",
-        answers: {
-            a: "Salsa",
-            b: "Tango",
-            c: "Waltz",
-            d: "Flamenco"
+        {
+            
+            question: "2. Where do you find yourself dancing the most?",
+            options: [
+                { answer: "For friends and family", danceStyle: "Ballet" },
+                { answer: "In public", danceStyle: "Hip-Hop" },
+                { answer: "Around the house", danceStyle: "Ballroom" },
+                { answer: "With a group of friends", danceStyle: "Jazz" }
+            ]
         },
-        correctAnswer: "a"
-    },
-    // Add more questions here...
-];
+        {
+            question: "3. What kind of dance moves do you enjoy?",
+            options: [
+                { answer: "Elegant and precise", danceStyle: "Ballet" },
+                { answer: "Fast and sharp", danceStyle: "Hip-Hop" },
+                { answer: "Smooth and rhythmic", danceStyle: "Ballroom" },
+                { answer: "Energetic and free-form", danceStyle: "Jazz" }
+            ]
+        },
+        {
+            question: "4. How do you dress?",
+            options: [
+                { answer: "Vintage", danceStyle: "Ballet" },
+                { answer: "Sporty", danceStyle: "Hip-Hop" },
+                { answer: "Dressy", danceStyle: "Ballroom" },
+                { answer: "Casual", danceStyle: "Jazz" }
+            ]
+        },{
+            question: "5. Pick a color that draws you in.",
+            options: [
+                { answer: "Pink", danceStyle: "Ballet" },
+                { answer: "Black", danceStyle: "Hip-Hop" },
+                { answer: "Gold", danceStyle: "Ballroom" },
+                { answer: "Purple", danceStyle: "Jazz" }
+            ]
+        },
+        {
+            question: "6. What is your favorite dance movie?",
+            options: [
+                { answer: "Center Stage", danceStyle: "Ballet" },
+                { answer: "Step UP", danceStyle: "Hip-Hop" },
+                { answer: "Shall We Dance", danceStyle: "Ballroom" },
+                { answer: "Hairspray", danceStyle: "Jazz" }
+            ]
+        },
+        {
+            question: "7. How would you describe your room?",
+            options: [
+                { answer: "Neat and Tidy", danceStyle: "Ballet" },
+                { answer: "Looks like a tornado hit", danceStyle: "Hip-Hop" },
+                { answer: "In between not messy and not clean", danceStyle: "Ballroom" },
+                { answer: "An 'organized' mess", danceStyle: "Jazz" }
+            ]
+        },
+        {
+            question: "8. It's Friday night at the end of a long week. What do you do?",
+            options: [
+                { answer: "Take a candle lit bath", danceStyle: "Ballet" },
+                { answer: "Wherever the night takes you", danceStyle: "Hip-Hop" },
+                { answer: "Take on the town with you friends", danceStyle: "Ballroom" },
+                { answer: "Try something new", danceStyle: "Jazz" }
+            ]
+        },
+        {
+            question: "9. Which city would you like to live in?",
+            options: [
+                { answer: "New York", danceStyle: "Ballet" },
+                { answer: "Los Angeles", danceStyle: "Hip-Hop" },
+                { answer: "Miami", danceStyle: "Ballroom" },
+                { answer: "Chicago", danceStyle: "Jazz" }
+            ]
+        }
+    ];
 
-let currentQuestion = 0;
-let score = 0;
+    const quizContainer = document.getElementById('quiz-container');
+    const submitBtn = document.getElementById('submit-btn');
+    const resultContainer = document.getElementById('result');
+    let currentQuestionIndex = 0;
+    let answers = [];
 
-const questionElement = document.getElementById("question");
-const answersElement = document.getElementById("answers");
-const submitButton = document.getElementById("submit");
-const resultElement = document.getElementById("result");
-
-function displayQuestion() {
-    const question = questions[currentQuestion];
-    questionElement.textContent = question.question;
-    answersElement.innerHTML = "";
-
-    for (const key in question.answers) {
-        const answer = question.answers[key];
-        const button = document.createElement("button");
-        button.textContent = answer;
-        button.value = key;
-        button.addEventListener("click", checkAnswer);
-        answersElement.appendChild(button);
+    function loadQuestion() {
+        const question = questions[currentQuestionIndex];
+        quizContainer.innerHTML = `
+            <img src="${question.image}" alt="${question.question}" style="width:500px; height:700px;">
+            <h3>${question.question}</h3>
+            <form id="quiz-form">
+                ${question.options.map((option, index) => `
+                    <label>
+                        <input type="radio" name="answer" value="${option.danceStyle}" required>
+                        ${option.answer}
+                    </label><br>
+                `).join('')}
+            </form>
+        `;
     }
-}
 
-function checkAnswer(event) {
-    const selectedAnswer = event.target.value;
-    const correctAnswer = questions[currentQuestion].correctAnswer;
+    function displayResult() {
+        const result = answers.reduce((acc, curr) => {
+            acc[curr] = (acc[curr] || 0) + 1;
+            return acc;
+        }, {});
 
-    if (selectedAnswer === correctAnswer) {
-        score++;
-        resultElement.textContent = "Correct!";
-    } else {
-        resultElement.textContent = "Incorrect!";
+        const mostChosen = Object.keys(result).reduce((a, b) => result[a] > result[b] ? a : b);
+        resultContainer.innerHTML = `Your dance style is: ${mostChosen}! <br><button id="retake-btn">Retake Quiz</button>`;
+        document.getElementById('retake-btn').addEventListener('click', resetQuiz);
     }
 
-    currentQuestion++;
-
-    if (currentQuestion < questions.length) {
-        displayQuestion();
-    } else {
-        showResults();
+    function resetQuiz(){
+        currentQuestionIndex = 0;
+        answers = [];
+        resultContainer.innerHTML = '';
+        loadQuestion();
     }
-}
 
-function showResults() {
-    questionElement.textContent = "Quiz completed!";
-    answersElement.innerHTML = "";
-    resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
-    submitButton.style.display = "none";
-}
+    submitBtn.addEventListener('click', function() {
+        const form = document.getElementById('quiz-form');
+        const selectedOption = form.elements['answer'].value;
+        answers.push(selectedOption);
 
-displayQuestion();
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            displayResult();
+        }
+    });
+
+    loadQuestion();
+});
