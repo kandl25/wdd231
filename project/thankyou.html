@@ -12,7 +12,6 @@
         <meta property="og:url" content="https://github.com/kandl25/wdd231/project/index.html">
     
         <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/join.css">
         <link rel="stylesheet" href="styles/normalize-large.css">
         <link rel="icon" href="chamber/icon.ico">
 
@@ -34,29 +33,10 @@
         </div>
     </header>
     <main>
-        <section>
-            <h2 class="sign-up">Sign Up for a Class</h2>
-            <p>Fill out the form below to join a class at Keep to the Beat.</p>
-            <form method="GET" action="thankyou.html" id="form-body">
-                <label>Parent First Name: <input type="text" required name="first" autocomplete="given-name" title="Your First Name"></label>
-                <label>Parent Last Name: <input type="text" required name="last" autocomplete="family-name" title="Your Last Name"></label>
-                <label>Student First Name: <input type="text" required name="student-first" autocomplete="student-given" title="Your First Name"></label>
-                <label>Student Last Name: <input type="text" required name="student-last" autocomplete="student-family" title="Your Last Name"></label>
-                <label>Email: <input type="email" required name="email" autocomplete="email" title="Your Email" placeholder="joinus@murraypark"></label>
-                <label>Phone #: <input type="tel" required name="phone" autocomplete="tel" title="Your Phone Number"></label>
-                <label>Student Age: <input type="number" name="age" autocomplete="number" title="age"></label>
-                <label>Student DOB (MM/DD/YYYY): <input type="date" required name="birthday" autocomplete="(MM/DD/YYYY)" title="Student Birthday"></label>
-                <label for="class">Select a Class:</label>
-                <select id="class" name="class"> 
-                    <option value="ballet">Ballet</option>
-                    <option value="hiphop">Hip-Hop</option>
-                    <option value="salsa">Ballroom</option>
-                    <option value="jazz">Jazz</option>
-                </select>
-                <button type="submit">Grab your dance shoes!</button>
-            </form>
-        </section>
-        
+        <div id="thank-you">
+            <h2>Thank you for wanting to dance!</h2>
+            <p id="details"></p>
+        </div>
     </main>
     <footer>
         <div class="left">
@@ -71,8 +51,6 @@
             <p class="copywright"> &copy; 
                 <span id="currentyear"></span>
                 Kaylee DeCamps | Idaho USA
-            </p>
-            <p class="modified">
                 <span id="lastmodified"></span>
             </p>
         </div>

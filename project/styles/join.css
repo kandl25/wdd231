@@ -1,0 +1,35 @@
+.sign-up {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: 1px underline #e2a538;
+}
+section p {
+    text-align: center;
+}
+form {
+    margin: 1rem 2%;
+}
+label {
+    display: block;
+    font-weight: bold;
+    padding-top: .2rem;
+    margin-top: 1rem;
+} 
+input {
+    border-color: #d8e4ff;
+    height: 30px;
+    width: auto;
+}
+button[type=submit] {
+  border-radius: 1rem;
+  padding: 7px;
+  transition: .5s;
+}
+button[type=submit]:hover {
+    cursor: pointer;
+    padding: 10px;
+    transition: .3s;
+    border: 3px dashed #e2a538;
+}

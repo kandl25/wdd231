@@ -2,28 +2,31 @@
     margin: 0;
     padding: 0;
     align-items: center;
+    box-sizing: border-box;
 }
 :root {
-    --header: #2A4551;
-    --text: #e2a538;
-    --gold: #d8e4ff;
+    --text: #2A4551;
+    --gold: #e2a538;
+    --header: #d8e4ff;
 }
 
 /*#413C58*/
-
+body {
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+}
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--header);
+    color: var(--text);
     padding: 20px;
     font-family: "Edu NSW ACT Foundation", cursive;
     font-size: large;
     text-align: center;
 }
-
 nav {
     position: relative;
 }
-
 .nav-button {
     display: none;
     font-size: 30px;
@@ -33,7 +36,6 @@ nav {
     top: 20px;
     color: white;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -44,20 +46,40 @@ nav ul {
     width: 100%;
     background-color: #333;
 }
-
 nav ul li {
     display: block;
     text-align: center;
     margin: 0;
     padding: 10px 0;
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
 }
-
 nav ul li a:hover {
     text-decoration: underline;
 }
+main {
+    margin: auto;
+    padding: 20px;
+}
+h2, h3, p, label {
+    font-family: Oswald;
+}
+footer {
+    background-color: var(--header);
+    color: var(--text);
+    display: flex;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+.icons img {
+    margin: 5px;
+}
 
+#thank-you h2, p {
+    text-align: center;
+    margin: 10px;
+    margin-top: 30px;
+}
