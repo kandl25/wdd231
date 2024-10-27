@@ -24,41 +24,70 @@ header {
     font-size: large;
     text-align: center;
 }
-nav {
+#menu-icon {
     position: relative;
-}
-.nav-button {
-    display: none;
-    font-size: 30px;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    border: 0.3rem solid transparent;
+    border-radius: 100%;
+    transition: 0.3s;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    color: white;
+}
+.menu-bar {
+    height: 0.25rem;
+    width: 3rem;
+    display: block;
+    margin: 0.5rem auto;
+    position: relative;
+    background-color: var(--primary-color);
+    border-radius: 0.625rem;
+    transition: 0.4s;
+}
+.menu-icon.open>.menu-bar:nth-child(1) {
+    transform: translateY(.75rem) rotate(45deg);
+}
+.menu-icon.open>.menu-bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.open>.menu-bar:nth-child(3) {
+    transform: translateY(-0.75rem) rotate(-45deg);
+}
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    border-top: 0.5rem solid var(--secondary-color);
+    transition: grid-template-rows 0.5s ease-out;
+}
+nav.open {
+    grid-template-rows: 1fr;
+    border-top: none;
 }
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    background-color: #333;
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    overflow: hidden;
 }
-nav ul li {
+nav li {
+    text-align: right;
     display: block;
-    text-align: center;
-    margin: 0;
-    padding: 10px 0;
+    display: flex;
 }
-nav ul li a {
-    color: white;
+nav a {
+    color: var(--nav-link-color);
+    display: block;
     text-decoration: none;
+    padding: 0.8rem;
+    flex: 1;
 }
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-text);
+    font-weight: 600;
 }
+nav a.active {
+    border-right: 0.5rem solid var(--secondary-color);
+}
+
 main {
     margin: auto;
     padding: 20px;

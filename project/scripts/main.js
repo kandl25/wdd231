@@ -7,12 +7,10 @@ const currentYear = today.getFullYear();
 currentYearElement.innerHTML = currentYear;
 lastModifiedElement.innerHTML = document.lastModified;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const navButton = document.getElementById("nav-button");
-    const navList = document.getElementById("nav-list");
+const hamButton = document.querySelector('#menu-icon');
+const mainNav = document.querySelector('#main-nav');
 
-    navButton.addEventListener("click", function() {
-        navList.classList.toggle('show');
-        navButton.classList.toggle('show');
-    });
+hamButton.addEventListener("click", () => {
+  hamButton.classList.toggle("open");
+  mainNav.classList.toggle("open");
 });
