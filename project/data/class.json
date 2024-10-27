@@ -1,0 +1,40 @@
+{
+    "schedule": [
+      {
+        "day": "Monday",
+        "classes": [
+          { "time": "10:00 AM", "name": "Ballet", "instructor": "Ms. Johnson" },
+          { "time": "1:00 PM", "name": "Hip-Hop", "instructor": "Mr. Lee" }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "classes": [
+          { "time": "9:00 AM", "name": "Salsa", "instructor": "Ms. Garcia" },
+          { "time": "3:00 PM", "name": "Jazz", "instructor": "Mr. Brown" }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "classes": [
+          { "time": "11:00 AM", "name": "Ballet", "instructor": "Ms. Johnson" },
+          { "time": "2:00 PM", "name": "Hip-Hop", "instructor": "Mr. Lee" }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "classes": [
+          { "time": "10:00 AM", "name": "Salsa", "instructor": "Ms. Garcia" },
+          { "time": "4:00 PM", "name": "Jazz", "instructor": "Mr. Brown" }
+        ]
+      },
+      {
+        "day": "Friday",
+        "classes": [
+          { "time": "12:00 PM", "name": "Ballet", "instructor": "Ms. Johnson" },
+          { "time": "3:00 PM", "name": "Hip-Hop", "instructor": "Mr. Lee" }
+        ]
+      }
+    ]
+  }
+  
