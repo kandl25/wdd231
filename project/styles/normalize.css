@@ -58,10 +58,13 @@ h2{
 h2, h3, p, label {
     font-family: Oswald;
 }
-.about, .content {
+.about {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+image{
+    width: auto;
 }
 footer {
     background-color: var(--header);
