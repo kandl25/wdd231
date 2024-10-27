@@ -3,12 +3,39 @@ h2 {
     font-size: x-large;
     text-decoration: 2px underline #e2a538;
 }
-#quiz-container {
-    margin-bottom: 20px;
+.quiz {
+    text-align: center;
 }
-
-#result {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #333;
+#submit-btn, #retake-btn {
+    border-radius: 1rem;
+    padding: 7px;
+    margin: 15px;
+    transition: .5s;
+    background-color: #e2a538;
 }
+#retake-btn:hover {
+    cursor: pointer;
+    padding: 10px;
+    transition: .3s;
+    border: 3px dashed #d8e4ff;
+}
+#submit-btn:hover {
+    cursor: pointer;
+    padding: 10px;
+    transition: .3s;
+    border: 3px dashed #d8e4ff;
+}
+img {
+    animation: fadein;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    }
