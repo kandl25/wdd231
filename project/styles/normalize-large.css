@@ -31,23 +31,4 @@
         display: grid;
         width: 100%;
     }
-  /*  .filler {
-        animation-duration: slidein;
-        animation-duration: 3.5s;
-        animation-direction: alternate;
-        animation-timing-function: ease;
-    }
-    @keyframes slidein {
-        0%{
-            transform: translate(150vw);
-            opacity: 0;
-        }
-        50%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-            transform: translate(0);
-        }
-    }*/
 }
