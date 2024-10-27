@@ -46,4 +46,16 @@ button[type=submit]:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    animation: fadein;
+    animation-duration: 3.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease;
 }
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    }
