@@ -7,10 +7,10 @@ const currentYear = today.getFullYear();
 currentYearElement.innerHTML = currentYear;
 lastModifiedElement.innerHTML = document.lastModified;
 
-const hamButton = document.querySelector('#menu-icon');
-const mainNav = document.querySelector('#main-nav');
+const hamButton = document.querySelector('#menu');
+const mainNav = document.querySelector('.navigation');
 
 hamButton.addEventListener("click", () => {
+  navigation.classList.toggle("open");
   hamButton.classList.toggle("open");
-  mainNav.classList.toggle("open");
 });
