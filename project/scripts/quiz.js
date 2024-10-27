@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const questions = [
         {
-            image: "images/ballet-barre.webp",
+            image: "images/phone.webp",
             question: "1. What is your favorite type of music?",
             options: [
                 { answer: "Classical", danceStyle: "Ballet" },
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
-            
+            image: "images/home.webp",
             question: "2. Where do you find yourself dancing the most?",
             options: [
                 { answer: "For friends and family", danceStyle: "Ballet" },
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
+            image: "images/dancers-bckgr.webp",
             question: "3. What kind of dance moves do you enjoy?",
             options: [
                 { answer: "Elegant and precise", danceStyle: "Ballet" },
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
+            image: "images/clothes.webp",
             question: "4. How do you dress?",
             options: [
                 { answer: "Vintage", danceStyle: "Ballet" },
@@ -37,7 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 { answer: "Dressy", danceStyle: "Ballroom" },
                 { answer: "Casual", danceStyle: "Jazz" }
             ]
-        },{
+        },
+        {
+            image: "images/glitter.webp",
             question: "5. Pick a color that draws you in.",
             options: [
                 { answer: "Pink", danceStyle: "Ballet" },
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
+            image: "images/movie.webp",
             question: "6. What is your favorite dance movie?",
             options: [
                 { answer: "Center Stage", danceStyle: "Ballet" },
@@ -56,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
+            image: "images/room.webp",
             question: "7. How would you describe your room?",
             options: [
                 { answer: "Neat and Tidy", danceStyle: "Ballet" },
@@ -65,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
+            image: "images/candles.webp",
             question: "8. It's Friday night at the end of a long week. What do you do?",
             options: [
                 { answer: "Take a candle lit bath", danceStyle: "Ballet" },
@@ -74,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
+            image: "images/city.webp",
             question: "9. Which city would you like to live in?",
             options: [
                 { answer: "New York", danceStyle: "Ballet" },
@@ -93,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadQuestion() {
         const question = questions[currentQuestionIndex];
         quizContainer.innerHTML = `
-            <img src="${question.image}" alt="${question.question}" style="width:500px; height:700px;">
+            <img src="${question.image}" alt="${question.question}" style="width:700px; height:480px;" loading="lazy">
             <h3>${question.question}</h3>
             <form id="quiz-form">
                 ${question.options.map((option, index) => `
