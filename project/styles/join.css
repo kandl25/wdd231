@@ -9,7 +9,8 @@ section p {
     text-align: center;
 }
 form {
-    margin: 1rem 2%;
+    display: grid;
+    width: 100%;
 }
 label {
     display: block;
@@ -20,16 +21,29 @@ label {
 input {
     border-color: #d8e4ff;
     height: 30px;
-    width: auto;
+    width: 100%;
+}
+option {
+    text-align: center;
+}
+select {
+    border: 3px double #d8e4ff;
+    padding: 5px;
 }
 button[type=submit] {
-  border-radius: 1rem;
-  padding: 7px;
-  transition: .5s;
+    border-radius: 1rem;
+    padding: 7px;
+    margin: 15px;
+    transition: .5s;
 }
 button[type=submit]:hover {
     cursor: pointer;
     padding: 10px;
     transition: .3s;
     border: 3px dashed #e2a538;
+}
+.filler {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
