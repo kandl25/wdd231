@@ -1,0 +1,19 @@
+h2 {
+    text-align: center;
+    text-decoration: 2px underline #e2a538;
+    font-size: xx-large;
+}
+.directory {
+    color: #2A4551;
+    margin: 10px;
+    padding: 5px;
+    border: 3px double #d8e4ff;
+    border-radius: 25px;
+    text-align: center; 
+}
+.name {
+    background-color: #e2a538;
+    border-radius: 15px 30px;
+    color: white;
+    margin-bottom: 10px;
+}
