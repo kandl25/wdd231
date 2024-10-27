@@ -1,28 +1,58 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetchURL('')
-        .then(response => response.json())
-        .then(data => {
-            const scheduleContainer = document.getElementById('schedule-container');
-            const schedule = data.schedule;
+const cardsContainer = document.querySelector("#schedule-container");
+const url = "https://github.com/kandl25/wdd231/blob/main/project/data/class.json";
 
-            schedule.forEach(daySchedule => {
-                const dayDiv = document.createElement('div');
-                dayDiv.classList.add('day-schedule');
-                dayDiv.innerHTML = `<h2>${daySchedule.day}</h2>`;
+async function getClasses() {
+  const response = await fetch(url);
+  const data = await response.json();
+  displayClasses(data.class);
+}
 
-                daySchedule.classes.forEach(classItem => {
-                    const classDiv = document.createElement('div');
-                    classDiv.classList.add('class-item');
-                    classDiv.innerHTML = `
-                        <p><strong>Time:</strong> ${classItem.time}</p>
-                        <p><strong>Class:</strong> ${classItem.name}</p>
-                        <p><strong>Instructor:</strong> ${classItem.instructor}</p>
-                    `;
-                    dayDiv.appendChild(classDiv);
-                });
+const displayClasses = (classes) => {
+  cardsContainer.innerHTML = "";
+  let counter = 0;
 
-                scheduleContainer.appendChild(dayDiv);
-            });
-        })
-        .catch(error => console.error('Error loading schedule:', error));
-});
+  classes.forEach(member => {
+    const card = document.createElement("div");
+    card.classList.add("directory");
+
+    const name = document.createElement("h2");
+    name.classList.add("style");
+    name.textContent = member.style;
+    card.appendChild(name);
+
+    const image = document.createElement("img");
+    image.setAttribute("src", member.image);
+    image.setAttribute("alt", member.name ? `${member.name} company logo` : "Company Logo");
+    if (counter > 3) {
+      image.setAttribute("loading", "lazy");
+    }
+    image.setAttribute("width", 300);
+    image.setAttribute("height", 500);
+    card.appendChild(image);
+
+    const address = document.createElement("p");
+    address.classList.add("teacher");
+    address.textContent = member.teacher;
+    card.appendChild(teacher);
+
+    const phone = document.createElement("p");
+    phone.classList.add("time");
+    phone.textContent = member.time;
+    card.appendChild(time);
+
+    const age = document.createElement("p");
+    url.classList.add("age");
+    url.textContent = member.age;
+    card.appendChild(age);
+
+    const cost = document.createElement("p");
+    url.classList.add("cost");
+    url.textContent = member.cost;
+    card.appendChild(cost);
+ 
+    cardsContainer.appendChild(card);
+    counter++;
+  });
+}
+
+getClasses();

@@ -1,40 +1,44 @@
 {
-    "schedule": [
+    "classes": [
       {
-        "day": "Monday",
-        "classes": [
-          { "time": "10:00 AM", "name": "Ballet", "instructor": "Ms. Johnson" },
-          { "time": "1:00 PM", "name": "Hip-Hop", "instructor": "Mr. Lee" }
-        ]
+        "style": "Ballet",
+        "time": "Mondays and Wednesdays at 5PM",
+        "teacher": "Mrs. Berquist",
+        "age": "6-9",
+        "cost": "$30",
+        "image": "images/ballet-barre.webp"
       },
       {
-        "day": "Tuesday",
-        "classes": [
-          { "time": "9:00 AM", "name": "Salsa", "instructor": "Ms. Garcia" },
-          { "time": "3:00 PM", "name": "Jazz", "instructor": "Mr. Brown" }
-        ]
+        "style": "Hip-Hop",
+        "time": "Tuesdays and Thursdays at 5PM",
+        "teacher": "Mr. Luke",
+        "age": "10-14",
+        "cost": "$25",
+        "image": "images/headspin.webp"
       },
       {
-        "day": "Wednesday",
-        "classes": [
-          { "time": "11:00 AM", "name": "Ballet", "instructor": "Ms. Johnson" },
-          { "time": "2:00 PM", "name": "Hip-Hop", "instructor": "Mr. Lee" }
-        ]
+        "style": "Ballroom",
+        "time": "Wednesdays and Fridays at 6PM",
+        "teacher": "Mrs. Fowler",
+        "age": "15-19",
+        "cost": "$30",
+        "image": "images/ballroom-small.webp"
       },
       {
-        "day": "Thursday",
-        "classes": [
-          { "time": "10:00 AM", "name": "Salsa", "instructor": "Ms. Garcia" },
-          { "time": "4:00 PM", "name": "Jazz", "instructor": "Mr. Brown" }
-        ]
+        "style": "Jazz",
+        "time": "Tuesdays and Thursdays at 7PM",
+        "teacher": "Ms. Ward",
+        "age": "8-12",
+        "cost": "$25",
+        "image": "images/jazz.webp"
       },
       {
-        "day": "Friday",
-        "classes": [
-          { "time": "12:00 PM", "name": "Ballet", "instructor": "Ms. Johnson" },
-          { "time": "3:00 PM", "name": "Hip-Hop", "instructor": "Mr. Lee" }
-        ]
+        "style": "Contemporary",
+        "time": "Mondays and Thursdays 7PM",
+        "teacher": "Mrs. Pratt",
+        "age": "10-19",
+        "cost": "$40",
+        "image": "images/contemp.webp"
       }
     ]
-  }
-  
+}
